@@ -1,0 +1,182 @@
+/* Mailchimp Subscription */
+#mc-embedded-subscribe-form {
+  padding: 0.4rem 0 !important;
+  display: flex !important;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#mc-embedded-subscribe {
+  width: auto  !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0.5rem 2rem !important;
+  border-radius: 0 !important;
+}
+
+#mc_embed_signup input[type=text],
+#mc_embed_signup input[type=email] {
+  padding: 1rem 1rem !important;
+  border-radius: 0 !important;
+  border-color: white;
+  border-width: 2px;
+  outline: none;
+}
+
+#mc_embed_signup .mc-field-group {
+  flex: 1;
+  width: auto !important;
+}
+
+#mc_embed_signup div.mce_inline_error {
+  background: transparent!important;
+  color: #e85c41 !important;
+  font-weight: bold !important;
+}
+
+#mc_embed_signup div.response {
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  width: auto !important;
+}
+
+@media ( min-width: 480px ) {
+  #mc-embedded-subscribe-form {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
+
+
+/* Embed Plus Plugin for YouTube */
+.epyt-gallery-subscribe a.epyt-gallery-subbutton {
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.epyt-gallery-subscribe a.epyt-gallery-subbutton img {
+  width: 32px !important;
+  margin-right: .2em;
+}
+.epyt-gallery-img {
+  border-radius: 5px;
+}
+
+
+/* OACS Like PLugin */
+.oacs-spl-like-button-wrapper {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin-top: 2em;
+  padding: 2em;
+  background: #f5f5f5;
+}
+
+.oacs-spl-like-button {
+  display: flex;
+  justify-content: center;
+}
+
+.oacs-spl-like-button .spinner {
+  position: absolute;
+  top: 50%;
+  left: 1em;
+}
+
+.oacs-spl-counter {
+  margin-top: 0.25em;
+}
+
+
+/* ReWord plugin */
+.reword-icon {
+  font-size: 0;
+  background: #333;
+}
+
+.reword-icon:hover {
+  transform: scale(1.2)
+}
+.reword-icon:before {
+  content: "⚠️";
+  font-size: 21px;
+}
+
+.reword-icon-bottom {
+  bottom: 140px;
+}
+
+.reword-icon-right.reword-icon-inactive {
+  right: -40px;
+}
+
+/* Shareaholic */
+.shareaholic-share-buttons-container.shareaholic-follow-buttons-container {
+	margin-top: 0;
+}
+.shareaholic-share-buttons-container .shareaholic-share-button {
+	opacity: 0.75;
+  transition: opacity ease-in 0.2s;
+}
+.shareaholic-share-buttons-container .shareaholic-share-button:hover {
+	opacity: 1;
+}
+.shareaholic-floated {
+  	transform: translateZ(0);
+}
+.shareaholic-floated.shareaholic-mobile {
+	width: 100%;
+  	background: white;
+  	box-shadow: 0 0 5px rgba(0,0,0,.05);
+}
+.shareaholic-floated:not(.shareaholic-mobile) .shareaholic-share-buttons-animation-wrapper {
+  	padding-top: 20px;
+  	background: white;
+}
+
+/* Shareaholic: Related posts */
+.shareaholic-canvas[data-app-id-name="post_below_content"] {
+	max-width: 100rem !important;
+}
+
+.shareaholic-recommendations-header  {
+	font-size: 24px !important;
+}
+
+.shareaholic-recommendations .shareaholic-recommendation-article-link {
+	overflow: initial !important;
+}
+
+.shareaholic-recommendations .shareaholic-image {
+	transition: box-shadow ease-in-out 0.3s;
+}
+
+.shareaholic-recommendations .shareaholic-recommendation-article-link:hover .shareaholic-image {
+	box-shadow: 0 -5px 10px #ddd !important;
+}
+
+.shareaholic-recommendations .shareaholic-recommendation-article-details {
+	position: static !important;
+	padding: 0 !important;
+	background: transparent !important;
+}
+
+.shareaholic-recommendations .shareaholic-recommendation-article-title {
+	color: #333 !important;
+	font-size: 10pt !important;
+	text-shadow: none !important;
+	text-transform: initial  !important;
+}
+
+/* Shareaholic: Follow */
+.shareaholic-canvas[data-app="follow_buttons"] {
+	margin-bottom: 2rem;
+}
+
+@media ( max-width: 1000px ) {
+  .shareaholic-floated.shareaholic-vertical {
+      display: none;
+  }
+} 

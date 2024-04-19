@@ -1,0 +1,234 @@
+/* Site header */
+.logovo-header {
+  background: #fff;
+  background-image: url(/wp-content/themes/logovo/assets/images/header-totems.webp);
+  background-size: cover;
+  box-shadow: 0 0 3px rgba(0,0,0,.3);
+}
+
+/* 404 Page */
+.logovo-404 {
+  padding: 20vh 0;
+}
+
+/* Video Template */
+.logovo-video-header {
+	position: relative;
+	overflow: hidden;
+	background: #eee;
+}
+
+.logovo-video-header-player {
+	position: relative;
+	z-index: 1;
+	aspect-ratio: 16/9;
+	max-height: calc(100vh + 60px);
+	min-height: 400px;
+	max-width: 1920px;
+	width: 100%;
+	margin: -60px auto 0;
+    box-shadow: 0 -40px 100px #666;
+}
+
+
+.logovo-video-bg-image {
+	position: absolute;
+	z-index: 0;
+	height: 100%;
+	width: 100%;
+	display: none;
+	object-fit: cover;
+	filter: blur(2px);
+    opacity: 0.33;
+}
+@media ( min-width: 660px ) {
+	.logovo-video-bg-image {
+		display: block;
+	}
+}
+
+/* Donate Button */
+
+.logovo-donate-button {
+  display: block;
+  max-width: 100%;
+  margin: 2em auto;
+  cursor: pointer;
+}
+.logovo-donate-button:hover {
+  box-shadow: 0 0 10px #90c5e3;
+}
+.logovo-donate-button:active {
+  transform: translate(1px, 1px);
+}
+
+/* Explicit content */
+
+.logovo-explicit {
+  max-width: 162px;
+}
+
+/* Image number */
+
+.logovo-image-number {
+  display: none;
+  float: left;
+  margin: 1em 2em -2em -2em;
+  color: #ccc;
+  font-size: 1.5;
+  font-weight: 300;
+  text-decoration: none;
+  text-align: right;
+  transition: color 0.3s ease-in-out;
+}
+
+.entry-media:hover .logovo-image-number {
+  color: #888;
+}
+
+blockquote .logovo-image-number {
+  display: none;
+}
+
+@media ( min-width: 1330px ) {
+  .logovo-image-number {
+		display: block;
+	}
+}
+
+/* Posts on map */
+
+.logovo-map {
+	height: 90vh;
+	margin: 0 !important;
+  	margin-top: -3rem !important;
+}
+
+@media ( min-width: 700px ) {
+  .logovo-map {
+  	margin-top: -8rem !important;
+  }
+}
+
+/* Related posts */
+
+.logovo-related-posts {
+  background: white;
+  border-top: solid 1px #eee;
+  border-bottom: solid 1px #eee;
+}
+
+/* Etsy shop */
+
+.logovo-etsy {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3em 2em;
+  border-top: solid 1px #eee;
+  text-align: center;
+}
+
+.logovo-etsy–title {
+  margin: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.logovo-etsy-shipping {
+  margin: 0;
+  color: #999;
+  font-size: 90%;
+}
+
+.logovo-etsy-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin: 2em 0;
+  font-size: 12px;
+}
+
+.logovo-etsy-item {
+  flex: 1;
+  min-width: 150px;
+  margin: 0;
+}
+
+.logovo-etsy-item-link {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 1em;
+  border: solid 1px #ddd;
+  border-radius: 2px;
+  color: #999;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.logovo-etsy-item-link:hover {
+  border-color: #0086cc;
+}
+
+.logovo-etsy-item-title {
+  margin-top: 0.5em;
+  color: #333;
+  font-size: 120%;
+  line-height: 1.3;
+}
+
+
+/* Global footer */
+
+.logovo-footer {
+  font-size: 1.4rem;
+}
+
+.logovo-footer a {
+	text-decoration: none;
+}
+.logovo-footer a:focus,
+.logovo-footer a:hover {
+	text-decoration: underline;
+}
+
+.logovo-footer-widgets {
+  padding: 4em 0 2em;
+}
+
+.logovo-footer-subscription {
+  padding: 4em 0;
+  background: #fff;
+  background-image: url(/wp-content/themes/logovo/assets/images/footer-mountains-m.webp);
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 0 2rem #ddd;
+}
+
+.logovo-footer-credits {
+  display: flex;
+  align-items: baseline;
+}
+
+.logovo-footer-copyright {
+	margin: 0 1em 0 0;
+}
+
+.logovo-footer-bottom {
+  display: flex;
+  align-items: baseline;
+	justify-content: space-between;
+  padding: 4rem 0;
+  border-top: 1px solid #dedfdf;
+}
+
+@media ( min-width: 782px ) {
+  .logovo-footer .wp-block-columns {
+    column-gap: 4em;
+  }
+
+  .logovo-footer-subscription {
+    background-image: url(/wp-content/themes/logovo/assets/images/footer-mountains.webp);
+  }
+}
