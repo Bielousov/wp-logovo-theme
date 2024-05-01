@@ -154,6 +154,11 @@ blockquote .logovo-image-number {
   margin: 0;
 }
 
+.logovo-etsy-item img {
+  flex: 1;
+  object-fit: contain;
+}
+
 .logovo-etsy-item-link {
   display: flex;
   flex-direction: column;
@@ -176,6 +181,7 @@ blockquote .logovo-image-number {
   font-size: 120%;
   line-height: 1.3;
 }
+
 
 /* Global footer */
 
