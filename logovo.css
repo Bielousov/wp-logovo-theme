@@ -109,6 +109,90 @@ blockquote .logovo-image-number {
   }
 }
 
+/* Store */
+.logovo-store-title {
+  font-size: 3.5rem;
+
+  small {
+    display: block;
+    color: #777;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.9;
+  }
+}
+
+.logovo-store-product {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem 0;
+
+  @media (min-width: 860px) {
+    flex-direction: row;
+    gap: 5%;
+  }
+
+  p {
+    margin: 2em 0;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.6rem;
+  }
+}
+
+.logovo-store-product-image {
+  flex: 1;
+
+  img {
+    width: 100%;
+    box-shadow: 4px 5px 5px #aaa;
+  }
+}
+
+.logovo-store-product-image-caption {
+  font-size: 1.33rem !important;
+  font-style: italic;
+  color: #888;
+}
+
+.logovo-store-product-order {
+  flex-basis: 50%;
+
+  @media (min-width: 1440px) {
+    flex-basis: 640px;
+  }
+}
+
+.logovo-store-product-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 5vw 0 2rem;
+  font-weight: 500;
+}
+
+.logovo-store-product-price {
+  margin: 0;
+  font-size: 4rem;
+}
+
+.logovo-currency {
+  font-weight: 200;
+}
+
+.logovo-button-group {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  gap: 0;
+
+  > * {
+    flex: 1;
+  }
+}
+
 /* Related posts */
 
 .logovo-related-posts {

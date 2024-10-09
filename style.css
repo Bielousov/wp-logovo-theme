@@ -851,8 +851,13 @@ input[type="submit"] {
 	padding: 1.1em 1.44em;
 	text-align: center;
 	text-decoration: none;
-	text-transform: uppercase;
-	transition: opacity 0.15s linear;
+	transition: background-color 0.15s linear;
+
+	&[disabled] {
+		cursor: initial;
+		background: #b4c6d2;
+		text-decoration: none !important;
+	}
 }
 
 button:focus,
@@ -873,7 +878,7 @@ input[type="reset"]:focus,
 input[type="reset"]:hover,
 input[type="submit"]:focus,
 input[type="submit"]:hover {
-	text-decoration: underline;
+	box-shadow: inset 1px 1px 2px #000;
 }
 
 input[type="text"]:focus,
@@ -2487,10 +2492,6 @@ h2.entry-title {
 
 /* POST META */
 
-.post-meta-single-top .post-meta {
-	justify-content: center;
-}
-
 .post-meta-wrapper {
 	margin-top: 2rem;
 	margin-right: auto;
@@ -2500,13 +2501,14 @@ h2.entry-title {
 }
 
 .post-meta {
-	color: #6d6d6d;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+	margin: -1rem 0 0 -2rem;
+	color: #6d6d6d;
 	font-size: 1.5rem;
 	font-weight: 500;
 	list-style: none;
-	margin: -1rem 0 0 -2rem;
 }
 
 .post-meta li {
@@ -4928,7 +4930,7 @@ a.to-the-top > * {
 	input[type="button"],
 	input[type="reset"],
 	input[type="submit"] {
-		font-size: 1.7rem;
+		padding: 1.25em 2em;
 	}
 
 	/* MEDIA */

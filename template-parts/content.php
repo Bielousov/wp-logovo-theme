@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The default template for displaying content
  *
@@ -14,11 +15,11 @@
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-<?php
-  if ( is_single() || is_page() ) {
-    get_template_part( 'template-parts/content-single' );
+  <?php
+  if (is_single() || is_page()) {
+    get_template_part('template-parts/content-single');
   } else {
-    get_template_part( 'template-parts/content-archive' );
+    get_template_part('template-parts/content-archive');
   }
-?>
+  ?>
 </article><!-- .post -->
