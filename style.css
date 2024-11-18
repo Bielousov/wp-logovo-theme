@@ -257,6 +257,9 @@ Inter variable font. Usage:
 	}
 }
 
+img {
+	contain-intrinsic-size: 1920px;
+}
 
 /* -------------------------------------------------------------------------- */
 
@@ -3725,7 +3728,7 @@ blockquote .alignwide {
 .entry-content > .entry-media img,
 .entry-content > .wp-caption img {
     width: auto;
-    max-height: 90vh;
+    max-height: 95vh;
   	margin-left: auto;
   	margin-right: auto;
 }
