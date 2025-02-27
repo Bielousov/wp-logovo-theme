@@ -40,6 +40,24 @@
 		echo '<meta property="og:video" content="' . $custom_fields['video'][0] . '">';
 	}
 	?>
+
+	<script>
+		(function(s, t, a, y, twenty, two) {
+			s.Stay22 = s.Stay22 || {};
+
+			// Just fill out your configs here
+			s.Stay22.params = {
+				aid: "logovosolutionsinc",
+			};
+
+			// Leave this part as-is;
+			twenty = t.createElement(a);
+			two = t.getElementsByTagName(a)[0];
+			twenty.async = 1;
+			twenty.src = y;
+			two.parentNode.insertBefore(twenty, two);
+		})(window, document, "script", "https://scripts.stay22.com/letmeallez.js");
+	</script>
 </head>
 
 <body <?php body_class(); ?>>
