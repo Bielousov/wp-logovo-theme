@@ -201,6 +201,23 @@ blockquote .logovo-image-number {
   border-bottom: solid 1px #eee;
 }
 
+/* Monetization block */
+.logovo-m10n-block {
+  img {
+    display: none;
+  }
+  h2, h3, h4, h5, h6, p {
+    margin:0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
 /* Etsy shop */
 
 .logovo-etsy {
