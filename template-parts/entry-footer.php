@@ -16,14 +16,19 @@ if ($has_sidebar) {
 
     <?php
     get_template_part('template-parts/navigation');
-
-    $isAddFree = get_post_meta(get_the_ID(), 'ad-free', true);
-    if (empty($isAddFree)) {
-        the_ad_group(643);
-    } else {
-        echo the_ad(22179);
-    }
     ?>
+
+    <aside class="section-inner">
+        <?php
+        $isAddFree = get_post_meta(get_the_ID(), 'ad-free', true);
+        if (empty($isAddFree)) {
+            // No Adds: Explicit Content
+            the_ad_group(643);
+        } else {
+            echo the_ad(22179);
+        }
+        ?>
+    </aside>
 <?php
 }
 ?>
