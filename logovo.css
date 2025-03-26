@@ -212,6 +212,7 @@ blockquote .logovo-image-number {
   }
 
   a {
+    cursor: pointer;
     text-decoration: none;
   }
   a:hover {
@@ -236,7 +237,21 @@ blockquote .logovo-image-number {
 
 @media (min-width: 782px) {
   .logovo-m10n-block {
+    position: relative;
     background: white;
+    box-shadow: 2px 2px 3px #ccc;
+
+    &::before {
+      content: 'Монетизация';
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.5rem 1rem;
+      background: #ddd;
+      color: #fff;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
   }
 
   .logovo-m10n-block-content {
@@ -244,9 +259,26 @@ blockquote .logovo-image-number {
   }
 
   .logovo-m10n-block-image {
+    position: relative;
     display: block;
     flex-basis: 40%;
     flex-shrink: 0;
+
+    &::before {
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, #fff);
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 
