@@ -263,12 +263,14 @@ blockquote .logovo-image-number {
     display: block;
     flex-basis: 40%;
     flex-shrink: 0;
+    background-color: #ddd;
 
     &::before {
       content: '';
       pointer-events: none;
       position: absolute;
       right: 0;
+      z-index: 1;
       display: block;
       height: 100%;
       width: 100%;
