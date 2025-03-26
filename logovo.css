@@ -203,9 +203,11 @@ blockquote .logovo-image-number {
 
 /* Monetization block */
 .logovo-m10n-block {
+  display: flex;
+  align-items: stretch;
   margin: 4rem 0;
 
-  h2, h3, h4, h5, h6, p {
+  h2, h3, h4, h5, h6 {
     margin:0;
   }
 
@@ -219,18 +221,32 @@ blockquote .logovo-image-number {
 
 .logovo-m10n-block-image {
   display: none;
+
+  img {
+    margin: 0;
+  }
 }
 
 .logovo-m10n-block-content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
-  padding: 4rem;
 }
 
 @media (min-width: 782px) {
+  .logovo-m10n-block {
+    background: white;
+  }
+
   .logovo-m10n-block-content {
     padding: 4rem;
+  }
+
+  .logovo-m10n-block-image {
+    display: block;
+    flex-basis: 40%;
+    flex-shrink: 0;
   }
 }
 
