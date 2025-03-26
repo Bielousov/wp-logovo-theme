@@ -15,6 +15,10 @@
   border-radius: 0 !important;
 }
 
+#mc_embed_signup label {
+  display: none;
+}
+
 #mc_embed_signup input[type=text],
 #mc_embed_signup input[type=email] {
   padding: 1rem 1rem !important;
