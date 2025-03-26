@@ -84,7 +84,7 @@ $archive_subtitle = '';
 				echo '<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true" />';
 
 				if (($i + 3) % 5 == 0) {
-					echo the_ad(22180);
+					echo the_ad(647);
 				}
 			}
 			the_post();
