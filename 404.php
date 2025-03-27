@@ -44,7 +44,7 @@ get_header();
 
 
   <div class="section-inner">
-    <?php echo the_ad(22179); ?>
+    <?php echo the_ad(643); ?>
   </div><!-- .section-inner -->
 
 </main><!-- #site-content -->
