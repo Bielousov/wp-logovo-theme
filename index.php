@@ -112,6 +112,7 @@ $archive_subtitle = '';
 
 	<?php get_template_part('template-parts/pagination'); ?>
 
+	<!-- Merch store -->
 	<?php the_ad('25802'); ?>
 </main><!-- #site-content -->
 
