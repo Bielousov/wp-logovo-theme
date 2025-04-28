@@ -92,6 +92,7 @@
 
 /* OACS Like PLugin */
 .oacs-spl-like-button-wrapper {
+  clear: both;
   display: flex;
   justify-content: center;
   width: auto;
