@@ -1,0 +1,14 @@
+name: Deploy theme to website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  request-url:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Make HTTP Request
+        run: |
+          curl -X GET https://www.bielousov.com/wp-json/dfg/v1/package_update?secret=7c5d67dc4a2a7a5cb78315451a1d33940bf2fc9f9e60382adac35a55cb9c3222&type=theme&package=wp-logovo-theme
