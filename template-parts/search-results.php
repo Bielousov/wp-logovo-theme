@@ -16,7 +16,7 @@ if ($wp_query->found_posts) {
     $search_subtitle = sprintf(
         /* translators: %s: Number of search results */
         _n(
-            'Нашел! Всего один пост, зато какой!',
+            'Фух, нашел. Всего один пост, зато какой!',
             'Этого добра у нас навалом. Найдено %s постов',
             $wp_query->found_posts,
             'twentytwenty'

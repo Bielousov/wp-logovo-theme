@@ -42,6 +42,23 @@
 	?>
 
 	<script>
+		// Suppress annoying Stay22 styled console logs
+		(function() {
+			const urlParams = new URLSearchParams(window.location.search);
+			const debugMode = urlParams.has('debug');
+
+			if (!debugMode) {
+				const originalLog = console.log;
+				console.log = function(...args) {
+					if (args.length && typeof args[0] === 'string' && args[0].includes('%c')) {
+						return; // Suppress logs with "%c"
+					}
+					originalLog.apply(console, args);
+				};
+			}
+		})();
+
+		// Stay 22 script
 		(function(s, t, a, y, twenty, two) {
 			s.Stay22 = s.Stay22 || {};
 
