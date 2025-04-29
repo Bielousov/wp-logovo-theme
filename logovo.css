@@ -6,6 +6,61 @@
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
+/* Search Results Page*/
+.logovo-search-results {
+  margin: 4rem 0;
+}
+
+.logovo-search-results-image {
+  max-height: 30vh;
+  margin: 3vh auto;
+}
+
+.logovo-search-results-title {
+  margin: 0;
+  font-size: 5.2rem;
+}
+@media (min-width: 660px) {
+  .logovo-search-results-title {
+    font-size: 8rem;
+  }
+}
+
+.logovo-search-result-term {
+  overflow-wrap: break-word;
+  text-transform: capitalize;
+}
+
+.logovo-search-results-subtitle {
+  margin: .5em 0;
+  font-size: 2.1rem;
+}
+@media (min-width: 660px) {
+  .logovo-search-results-subtitle {
+    font-size: 3.2rem;
+  }
+}
+
+.logovo-search-no-results-form {
+  margin: 4rem auto;
+}
+@media (min-width: 660px) {
+  .logovo-search-no-results-form {
+    margin: 8rem auto;
+  }
+}
+
+.logovo-search-no-results-map {
+  margin: 1rem auto;
+}
+
+.logovo-search-no-results-map a {
+  text-decoration: none;
+}
+.logovo-search-no-results-map a:hover {
+  text-decoration: underline;
+}
+
 /* 404 Page */
 .logovo-404 {
   padding: 20vh 0;
