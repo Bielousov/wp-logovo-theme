@@ -2,9 +2,6 @@
 if (is_archive() && !is_search() && !is_home()) {
     $archive_title    = get_the_archive_title();
     $archive_subtitle = get_the_archive_description();
-}
-
-if ($archive_title || $archive_subtitle) {
 ?>
     <header class="archive-header has-text-align-center header-footer-group">
         <div class="section-inner medium">
