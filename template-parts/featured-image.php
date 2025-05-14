@@ -22,7 +22,7 @@ if (has_post_thumbnail() && !post_password_required()) {
 
 		<div class="featured-media-inner section-inner<?php echo $featured_media_inner_classes; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output 
 														?>">
-			<a href="<?php the_permalink(); ?>">
+			<a href="<?php the_permalink(); ?>" class="logovo-parallax">
 				<?php the_post_thumbnail('medium'); ?>
 			</a>
 

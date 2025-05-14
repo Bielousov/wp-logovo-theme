@@ -231,6 +231,9 @@ function twentytwenty_register_scripts()
 
 	wp_enqueue_script('logovo-panorama', get_template_directory_uri() . '/assets/js/panorama.js', array('jquery'), $theme_version, false);
 	wp_script_add_data('logovo-panorama', 'defer', true);
+
+	wp_enqueue_script('logovo-parallax', get_template_directory_uri() . '/assets/js/parallax.js', array('jquery'), $theme_version, false);
+	wp_script_add_data('logovo-parallax', 'defer', true);
 }
 
 add_action('wp_enqueue_scripts', 'twentytwenty_register_scripts');

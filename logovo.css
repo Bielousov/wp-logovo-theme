@@ -122,6 +122,30 @@
   max-width: 162px;
 }
 
+/* Image parallax */
+
+.logovo-parallax {
+	position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: min(33vh, 360px);
+	overflow: hidden;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: inset 2px 2px 2px #eee;
+}
+
+.logovo-parallax img {
+  will-change: transform;
+  position: relative;
+  flex-shrink: 0;
+	height: auto;
+	width: 100%;
+	transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
 /* Image number */
 
 .logovo-image-number {
