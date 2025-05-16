@@ -163,7 +163,13 @@
 	height: auto;
 	width: 100%;
 	transform: translate3d(0, 0, 0);
+  opacity: 0;
   backface-visibility: hidden;
+  transition: opacity 0.3s;
+
+  &[style] {
+    opacity: 1;
+  }
 }
 
 /**
