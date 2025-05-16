@@ -33,10 +33,9 @@ License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
 	11. Entry Content
 	12. Comments
 	13. Site Pagination
-	14. Error 404
-	15. Widgets
-	16. Site Footer
-	17. Media Queries
+	14. Widgets
+	15. Site Footer
+	16. Media Queries
 
 ----------------------------------------------------------------------------- */
 
@@ -4181,29 +4180,10 @@ div.comment:first-of-type {
     display: none;
 }
 
-/* -------------------------------------------------------------------------- */
-
-/*	14. Error 404
-/* -------------------------------------------------------------------------- */
-
-
-.error404 #site-content {
-	padding-top: 4rem;
-}
-
-.error404-content {
-	text-align: center;
-}
-
-.error404 #site-content .search-form {
-	justify-content: center;
-	margin-top: 3rem;
-}
-
 
 /* -------------------------------------------------------------------------- */
 
-/*	15.	Widgets
+/*	14.	Widgets
 /* -------------------------------------------------------------------------- */
 
 
@@ -4270,7 +4250,8 @@ div.comment:first-of-type {
 
 .emoji {
   display: inline-block;
-  width: 1em;
+  width: 1.5em;
+  vertical-align: text-bottom;
 }
 
 /* Font Families ----------------------------- */
@@ -4485,7 +4466,7 @@ div.comment:first-of-type {
 
 /* -------------------------------------------------------------------------- */
 
-/*	16. Site Footer
+/*	15. Site Footer
 /* -------------------------------------------------------------------------- */
 
 .footer,
@@ -4642,7 +4623,7 @@ a.to-the-top > * {
 
 /* -------------------------------------------------------------------------- */
 
-/*	17. Media Queries
+/*	16. Media Queries
 /* -------------------------------------------------------------------------- */
 
 @media ( max-width: 479px ) {
@@ -5611,13 +5592,6 @@ a.to-the-top > * {
 
 	.nav-links > * {
 		margin: 2.5rem 0 0 4rem;
-	}
-
-
-	/* Error 404 ----------------------------- */
-
-	.error404 #site-content {
-		padding-top: 8rem;
 	}
 
 	/* Widgets ------------------------------- */

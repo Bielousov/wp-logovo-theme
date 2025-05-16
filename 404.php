@@ -13,37 +13,42 @@ get_header();
 
 <main id="site-content" role="main">
 
-  <div class="section-inner thin logovo-404">
+  <div class="logovo-404">
+    <header class="section-inner medium has-text-align-center">
 
-    <h1 class="entry-title"><?php _e('Ошиблись адресом?', 'twentytwenty'); ?></h1>
+      <img src="/wp-content/themes/wp-logovo-theme/assets/images/search-no-results.webp" alt="No search results" class="logovo-no-results-image" />
 
-    <div class="intro-text">
-      <p><?php _e('Такой страницы пока (или больше) нет, попробуйте найти интересующий вас пост:', 'twentytwenty'); ?></p>
-    </div>
+      <h1 class="logovo-404-title">
+        <?php _e('Ошиблись адресом?', 'twentytwenty'); ?>
+      </h1>
 
-    <?php
-    get_search_form(
-      array(
-        'label' => __('404 not found', 'twentytwenty'),
-      )
-    );
-    ?>
-  </div>
+      <div class="logovo-search-results-subtitle">
+        <p><?php _e('Такой страницы пока (или больше) нет, попробуйте найти интересующий вас пост:', 'twentytwenty'); ?></p>
+      </div>
+    </header>
 
-
-  <div class="post-inner thin">
-    <div class="entry-content">
+    <div class="logovo-no-results-form section-inner thin">
       <?php
-      $id = 18089;
-      $post = get_post($id);
-      $content = apply_filters('the_content', $post->post_content);
-      echo $content;
+      get_search_form(
+        array(
+          'label' => __('404 not found', 'twentytwenty'),
+        )
+      );
       ?>
     </div>
-  </div>
 
 
-  <div class="section-inner">
+    <div class="section-inner thin">
+      <div class="entry-content">
+        <?php
+        $id = 18089;
+        $post = get_post($id);
+        $content = apply_filters('the_content', $post->post_content);
+        echo $content;
+        ?>
+      </div>
+    </div>
+
     <?php the_ad_group(643); ?>
   </div><!-- .section-inner -->
 

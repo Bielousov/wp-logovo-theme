@@ -1,4 +1,6 @@
-/* Site header */
+/**
+ * Site header
+ **/
 .logovo-header {
   background: #fff;
   background-image: url(/wp-content/themes/wp-logovo-theme/assets/images/header-totems.webp);
@@ -6,21 +8,21 @@
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
-/* Search Results Page*/
+/**
+ * Search Results / 404 Page*
+ **/
+.logovo-404,
 .logovo-search-results {
-  margin: 4rem 0;
+  margin: 5vh 0;
 }
 
-.logovo-search-results-image {
-  max-height: 30vh;
-  margin: 3vh auto;
-}
-
+.logovo-404-title,
 .logovo-search-results-title {
   margin: 0;
   font-size: 5.2rem;
 }
 @media (min-width: 660px) {
+  .logovo-404-title,
   .logovo-search-results-title {
     font-size: 8rem;
   }
@@ -31,42 +33,45 @@
   text-transform: capitalize;
 }
 
+.logovo-404-subtitle,
 .logovo-search-results-subtitle {
   margin: .5em 0;
   font-size: 2.1rem;
 }
 @media (min-width: 660px) {
+  .logovo-404-subtitle,
   .logovo-search-results-subtitle {
     font-size: 3.2rem;
   }
 }
 
-.logovo-search-no-results-form {
-  margin: 4rem auto;
+.logovo-no-results-image {
+  max-height: 35vh;
+  min-height: 25rem;
+  margin: 3vh auto;
+}
+
+.logovo-no-results-form {
+  margin: 5vh auto;
+
+  input[type="search"] {
+    border-width: 2px;
+  }
 }
 @media (min-width: 660px) {
-  .logovo-search-no-results-form {
-    margin: 8rem auto;
+  .logovo-no-results-form {
+    /* margin: 8rem auto; */
+
+    input[type="search"] {
+      font-size: 2rem;
+      padding: 1.75rem 4rem;
+    }
   }
 }
 
-.logovo-search-no-results-map {
-  margin: 1rem auto;
-}
-
-.logovo-search-no-results-map a {
-  text-decoration: none;
-}
-.logovo-search-no-results-map a:hover {
-  text-decoration: underline;
-}
-
-/* 404 Page */
-.logovo-404 {
-  padding: 20vh 0;
-}
-
-/* Video Template */
+/**
+ * Video Template 
+ **/
 .logovo-video-header {
   position: relative;
   overflow: hidden;
@@ -101,7 +106,10 @@
   }
 }
 
-/* Donate Button */
+/**
+ * Donate Button
+ **/
+
 
 .logovo-donate-button {
   display: block;
@@ -116,13 +124,17 @@
   transform: translate(1px, 1px);
 }
 
-/* Explicit content */
+/**
+ * Explicit content
+ **/
 
 .logovo-explicit {
   max-width: 162px;
 }
 
-/* Image parallax */
+/**
+ * Image parallax
+ **/
 
 .logovo-parallax {
 	position: relative;
@@ -131,7 +143,7 @@
   justify-content: center;
   max-height: min(33vh, 360px);
 	overflow: hidden;
-  background-color: #f5f5f5;
+  background-color: #f2f2f2;
   border-radius: 8px;
   box-shadow: inset 2px 2px 2px #eee;
 }
@@ -146,7 +158,9 @@
   backface-visibility: hidden;
 }
 
-/* Image number */
+/**
+ * Image number
+ **/
 
 .logovo-image-number {
   display: none;
@@ -180,7 +194,9 @@ blockquote .logovo-image-number {
   }
 }
 
-/* Posts on map */
+/**
+ * Posts on map
+ **/
 
 .logovo-map {
   height: 90vh;
@@ -194,7 +210,9 @@ blockquote .logovo-image-number {
   }
 }
 
-/* Store */
+/**
+ * Store
+ **/
 .logovo-store-title {
   font-size: 3.5rem;
 
@@ -278,7 +296,9 @@ blockquote .logovo-image-number {
   }
 }
 
-/* Related posts */
+/**
+ * Related posts
+ **/
 
 .logovo-related-posts {
   background: white;
@@ -286,7 +306,9 @@ blockquote .logovo-image-number {
   border-bottom: solid 1px #eee;
 }
 
-/* Monetization block */
+/**
+ * Monetization block
+ **/
 .logovo-m10n-block {
   display: flex;
   align-items: stretch;
@@ -371,7 +393,9 @@ blockquote .logovo-image-number {
 }
 
 
-/* Etsy shop */
+/**
+ * Etsy shop
+ **/
 
 .logovo-etsy {
   max-width: 1200px;
@@ -437,7 +461,9 @@ blockquote .logovo-image-number {
 }
 
 
-/* Global footer */
+/**
+ * Global footer
+ **/
 
 .logovo-footer {
   font-size: 1.4rem;
