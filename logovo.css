@@ -125,12 +125,17 @@
 }
 
 /**
- * Explicit content
+ * Prental Advisory (Explicit content)
  **/
 
-.logovo-explicit {
-  max-width: 162px;
+.logovo-explicit-content {
+  margin: 4vh auto;
 }
+
+.logovo-explicit {
+  display: inline-block;
+  max-width: 100%;
+  width: 256px;
 
 /**
  * Image parallax
