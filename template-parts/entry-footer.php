@@ -18,13 +18,15 @@ if ($has_sidebar) {
     get_template_part('template-parts/navigation');
     ?>
 
+    <p>Mooooo</p>
+
     <aside class="section-inner">
         <?php
         $isAddFree = get_post_meta(get_the_ID(), 'ad-free', true);
-        $isExplicitContent = get_post_meta(get_the_ID(), 'explicit-content', true);
+        $isExplicitContent = get_post_meta(get_the_ID(), 'explicit', true);
         if (!empty($isExplicitContent)) {
             // No Adds: Explicit Content
-            the_ad(22179);
+            get_template_part('template-parts/parental-advisory');
         } else if (empty($isAddFree)) {
             // Display Adds
             the_ad_group(643);

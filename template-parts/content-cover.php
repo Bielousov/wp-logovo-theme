@@ -70,6 +70,17 @@
 					<div class="entry-header-inner section-inner medium">
 
 						<?php
+						/**
+						 * Display explicit content
+						 */
+						$isExplicitContent = get_post_meta(get_the_ID(), 'explicit', true);
+						if (!empty($isExplicitContent)) {
+							// Explicit Content block
+							get_template_part('template-parts/parental-advisory');
+						}
+						?>
+
+						<?php
 
 						/**
 						 * Allow child themes and plugins to filter the display of the categories in the article header.

@@ -47,9 +47,12 @@ get_header();
         echo $content;
         ?>
       </div>
-    </div>
 
-    <?php the_ad_group(643); ?>
+      <?php
+      // After-post ad
+      the_ad_group(643);
+      ?>
+    </div>
   </div><!-- .section-inner -->
 
 </main><!-- #site-content -->

@@ -71,6 +71,11 @@ if (is_search()) {
                     echo $content;
                     ?>
                 </div>
+
+                <?php
+                // Stay22 GetYourGuild Canada
+                the_ad('26563');
+                ?>
             </div>
         <?php
         }
