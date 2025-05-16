@@ -44,6 +44,15 @@ if (is_singular()) {
 		}
 
 		if (is_singular()) {
+			/**
+			 * Display explicit content
+			 */
+			$isExplicitContent = get_post_meta(get_the_ID(), 'explicit', true);
+			if (!empty($isExplicitContent)) {
+				// Explicit Content block
+				get_template_part('template-parts/parental-advisory');
+			}
+
 			the_title('<h1 class="entry-title">', '</h1>');
 			if (function_exists('the_subtitle')) the_subtitle('<h2 class="entry-subtitle">', '</h2>');
 		} else {

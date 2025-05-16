@@ -68,18 +68,6 @@
 
 				<header class="entry-header has-text-align-center">
 					<div class="entry-header-inner section-inner medium">
-
-						<?php
-						/**
-						 * Display explicit content
-						 */
-						$isExplicitContent = get_post_meta(get_the_ID(), 'explicit', true);
-						if (!empty($isExplicitContent)) {
-							// Explicit Content block
-							get_template_part('template-parts/parental-advisory');
-						}
-						?>
-
 						<?php
 
 						/**
@@ -105,6 +93,15 @@
 
 						the_title('<h1 class="entry-title">', '</h1>');
 						if (function_exists('the_subtitle')) the_subtitle('<h2 class="entry-subtitle">', '</h2>');
+
+						/**
+						 * Display explicit content
+						 */
+						$isExplicitContent = get_post_meta(get_the_ID(), 'explicit', true);
+						if (!empty($isExplicitContent)) {
+							// Explicit Content block
+							get_template_part('template-parts/parental-advisory');
+						}
 
 						if (!is_page()) {
 

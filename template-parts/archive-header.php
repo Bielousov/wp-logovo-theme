@@ -9,7 +9,7 @@ if (is_archive() && !is_search() && !is_home()) {
                 <h1 class="archive-title"><?php echo wp_kses_post($archive_title); ?></h1>
             <?php } ?>
             <?php if ($archive_subtitle) { ?>
-                <div class="archive-subtitle section-inner thin max-percentage intro-text"><?php echo wp_kses_post(wpautop($archive_subtitle)); ?></div>
+                <p class="archive-subtitle section-inner thin max-percentage intro-text"><?php echo wp_kses_post(wpautop($archive_subtitle)); ?></p>
             <?php } ?>
         </div>
     </header><!-- .archive-header -->
