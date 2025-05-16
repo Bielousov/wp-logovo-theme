@@ -21,11 +21,13 @@ if ($has_sidebar) {
     <aside class="section-inner">
         <?php
         $isAddFree = get_post_meta(get_the_ID(), 'ad-free', true);
-        if (empty($isAddFree)) {
-            the_ad_group(643);
-        } else {
+        $isExplicitContent = get_post_meta(get_the_ID(), 'explicit-content', true);
+        if (!empty($isExplicitContent)) {
             // No Adds: Explicit Content
             the_ad(22179);
+        } else if (empty($isAddFree)) {
+            // Display Adds
+            the_ad_group(643);
         }
         ?>
     </aside>
