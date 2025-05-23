@@ -17,7 +17,6 @@
 
         parallaxImages.forEach(figure => {
             const rect = figure.getBoundingClientRect();
-
             // Only apply effect when figure is in view
             if (rect.top < window.innerHeight && rect.bottom > 0) {
                 const img = figure.querySelector("img");
@@ -42,5 +41,7 @@
 
     window.addEventListener("scroll", onScroll);
     window.addEventListener("resize", onScroll);
+    document.querySelectorAll(".logovo-parallax").forEach(img => img.addEventListener("load", onScroll));
+
     updateParallax();
 })(window);
