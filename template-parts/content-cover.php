@@ -139,15 +139,12 @@
 		</div><!-- .cover-header-inner-wrapper -->
 	</div><!-- .cover-header -->
 
-	<?php
-	if (is_attachment()) {
-		get_template_part('template-parts/entry-attachment');
-	} else {
-		get_template_part('template-parts/entry-content');
-	}
-	?>
+	<div class="post-inner medium" id="post-inner">
 
-	<div class="section-inner">
+		<div class="entry-content">
+			<?php the_content(); ?>
+		</div>
+
 		<?php
 		wp_link_pages(
 			array(

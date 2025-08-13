@@ -9,16 +9,27 @@
  */
 
 $entry_header_classes = '';
+$featured_image_url = null;
 
 if (is_singular()) {
 	$entry_header_classes .= ' header-footer-group';
+
+	if (!post_password_required()) {
+		$featured_image_url = esc_url(get_the_post_thumbnail_url(get_the_ID(), 'medium'));
+	}
 }
 
 ?>
 
-<header class="entry-header has-text-align-center<?php echo esc_attr($entry_header_classes); ?>">
+<header class="entry-header logovo-entry-header has-text-align-center<?php echo esc_attr($entry_header_classes); ?>">
 
-	<div class="entry-header-inner section-inner medium">
+	<?php
+	if ($featured_image_url !== null) {
+		echo '<img src="' . $featured_image_url . '" alt="' . get_the_title() . '" class="logovo-entry-header-backfill" />';
+	}
+	?>
+
+	<div class="entry-header-inner logovo-entry-header-inner section-inner medium">
 
 		<?php
 		/**
