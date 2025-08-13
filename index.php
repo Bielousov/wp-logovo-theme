@@ -40,7 +40,10 @@ $archive_subtitle = '';
 				echo '<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true" />';
 
 				if (($i + 3) % 5 == 0) {
+					echo '<div class="featured-media-inner section-inner medium">';
 					the_ad_group(647);
+					echo '</div>';
+					echo '<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true" />';
 				}
 			}
 			the_post();
