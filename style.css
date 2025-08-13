@@ -2640,7 +2640,7 @@ body:not(.singular) main > article:first-of-type {
 
 .featured-media img {
     width: auto;
-    max-height: 90vh;
+    max-height: 95vh;
 	margin: 0 auto;
 }
 
