@@ -13,7 +13,7 @@ if (!is_page_template('templates/template-full-headless.php')) {
 }
 ?>
 
-<div class="post-inner <?php echo $postClass; ?>">
+<div class="post-inner <?php echo $postClass; ?>" id="post-inner">
     <div class="entry-content">
         <?php the_content(); ?>
     </div>
