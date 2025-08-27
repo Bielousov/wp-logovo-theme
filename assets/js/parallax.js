@@ -13,7 +13,7 @@
     
     const updateParallax = () => {
         const parallaxImages = document.querySelectorAll(".logovo-parallax");
-        const maxParallaxIntensity = 120;
+        const maxParallaxIntensity = 64;
 
         parallaxImages.forEach(figure => {
             const rect = figure.getBoundingClientRect();
@@ -32,12 +32,12 @@
                 const scrollRatio = rect.top / window.innerHeight;
                 const scrollAmount = scrollRatio * -maxTranslate;
 
-                figure.querySelector('img').style.transform = `translateY(${scrollAmount}px)`;
+                figure.querySelector('img').style.transform = `translate3d(0, ${scrollAmount}px, 0)`;
             }
         });
     };
 
-    const onScroll = throttle(updateParallax, 1_000 / 30);
+    const onScroll = throttle(updateParallax, 1_000 / 60);
 
     window.addEventListener("scroll", onScroll);
     window.addEventListener("resize", onScroll);

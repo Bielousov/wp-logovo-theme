@@ -157,6 +157,10 @@ body {
 
 /* Clearing ---------------------------------- */
 
+.clear {
+	clear: both;
+}
+
 .group::after,
 .entry-content::after {
 	clear: both;
@@ -6200,5 +6204,4 @@ a.to-the-top > * {
 		/*rtl:ignore*/
 		margin-right: 0;
 	}
-
 }

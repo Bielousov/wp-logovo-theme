@@ -153,7 +153,7 @@
 }
 
 /**
- * Prental Advisory (Explicit content)
+ * Parental Advisory (Explicit content)
  **/
 
 .logovo-explicit-content {
@@ -173,27 +173,31 @@
  **/
 
 .logovo-parallax {
-	position: relative;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-height: min(50vh, 520px);
-	overflow: hidden;
+  max-height: min(55vh, 520px);
+  overflow: hidden;
   background-color: #f2f2f2;
   border-radius: 8px;
   box-shadow: inset 2px 2px 2px #eee;
 }
 
 .logovo-parallax img {
+  contain: layout style paint; /* Limit reflow scope */
+  content-visibility: auto; /* Only render when visible */
   will-change: transform;
   position: relative;
   flex-shrink: 0;
-	height: auto;
-	width: 100%;
-	transform: translate3d(0, 0, 0);
+  max-height: none;
+  height: auto;
+  width: 100%;
   opacity: 0;
   backface-visibility: hidden;
-  transition: opacity 0.3s;
+  perspective: 1000px;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 0.3s 0.1s !important;
 
   &[style] {
     opacity: 1;
@@ -233,6 +237,37 @@ blockquote .logovo-image-number {
 @media (min-width: 1330px) {
   .logovo-image-number {
     display: block;
+  }
+}
+
+/**
+ * Book template
+ **/
+.logovo-book-cover {
+  max-width: 120px !important;
+}
+
+.logovo-book-cover a:hover img {
+  transform-origin: center;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.logovo-book-cover a:hover img {
+  transform: rotate3d(1, 1, 1, 5deg);
+}
+
+@media (min-width: 1330px) {
+  .logovo-book-cover {
+    max-width: 150px !important;
+  }
+  .logovo-book-cover.alignright {
+    margin-right: calc((100% - 120rem + 8rem) / 2) !important;
+    margin-left: 5em;
+  }
+  .logovo-book-cover.alignleft {
+    margin-left: calc((100% - 120rem + 8rem) / 2) !important;
+    margin-right: 5em;
   }
 }
 

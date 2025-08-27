@@ -1,5 +1,6 @@
 ( ( $ ) => {
-  const postImages = $('#post-inner .entry-content .entry-media img');
+  const postImages = $('#post-inner .entry-content .entry-media img')
+    .not('.entry-media.alignleft img, .entry-media.alignright img');
 
   if (postImages.length < 3) {
     return;
