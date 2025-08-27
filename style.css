@@ -4630,35 +4630,6 @@ a.to-the-top > * {
 /*	16. Media Queries
 /* -------------------------------------------------------------------------- */
 
-
-@media ( max-width: 599px ) {
-
-    .site-title {
-        font-size: 3.2rem;
-    }
-
-	/* Blocks -------------------------------- */
-
-	/* BLOCK: COLUMNS */
-
-	/* While columns are stacked */
-	.wp-block-column:last-child {
-		margin-bottom: 0;
-	}
-
-	.wp-block-columns + .wp-block-columns {
-		margin-top: 0.2rem;
-	}
-
-	.wp-block-columns.alignwide + .wp-block-columns.alignwide {
-		margin-top: -0.8rem;
-	}
-
-	.wp-block-columns.alignfull + .wp-block-columns.alignfull {
-		margin-top: -1.8rem;
-  }
-}
-
 @media ( max-width: 479px ) {
 
     .site-title {
@@ -4683,10 +4654,34 @@ a.to-the-top > * {
 
 	li {
 		margin: 0.5rem 0 0 1rem;
+  	}
+
+	/* BLOCK: COLUMNS */
+
+	/* While columns are stacked */
+	.wp-block-column:last-child {
+		margin-bottom: 0;
+	}
+
+	.wp-block-columns + .wp-block-columns {
+		margin-top: 0.2rem;
+	}
+
+	.wp-block-columns.alignwide + .wp-block-columns.alignwide {
+		margin-top: -0.8rem;
+	}
+
+	.wp-block-columns.alignfull + .wp-block-columns.alignfull {
+		margin-top: -1.8rem;
   }
 }
 
 @media ( min-width: 480px ) {
+
+
+    .site-title {
+        font-size: 3.2rem;
+    }
 
 	/* Blocks -------------------------------- */
 
