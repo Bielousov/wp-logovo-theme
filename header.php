@@ -237,10 +237,11 @@
 
 	</header><!-- #site-header -->
 
-	<?php if (function_exists('the_ad_placement')) {
-		the_ad_placement('global-header');
-	} ?>
-
 	<?php
 	// Output the menu modal.
 	get_template_part('template-parts/modal-menu');
+
+	if (function_exists('the_ad_placement')) {
+		the_ad_placement('global-header');
+	}
+	?>

@@ -4630,10 +4630,39 @@ a.to-the-top > * {
 /*	16. Media Queries
 /* -------------------------------------------------------------------------- */
 
+
+@media ( max-width: 599px ) {
+
+    .site-title {
+        font-size: 3.2rem;
+    }
+
+	/* Blocks -------------------------------- */
+
+	/* BLOCK: COLUMNS */
+
+	/* While columns are stacked */
+	.wp-block-column:last-child {
+		margin-bottom: 0;
+	}
+
+	.wp-block-columns + .wp-block-columns {
+		margin-top: 0.2rem;
+	}
+
+	.wp-block-columns.alignwide + .wp-block-columns.alignwide {
+		margin-top: -0.8rem;
+	}
+
+	.wp-block-columns.alignfull + .wp-block-columns.alignfull {
+		margin-top: -1.8rem;
+  }
+}
+
 @media ( max-width: 479px ) {
 
     .site-title {
-        font-size: 2.9rem;
+        font-size: 2.5rem;
     }
 
 	/* Blocks -------------------------------- */
@@ -4698,34 +4727,6 @@ a.to-the-top > * {
 	.x-multicolumn-widget li {
 		width: calc(50% - 2em);
 	}
-}
-
-@media ( max-width: 599px ) {
-
-    .site-title {
-        font-size: 3.2rem;
-    }
-
-	/* Blocks -------------------------------- */
-
-	/* BLOCK: COLUMNS */
-
-	/* While columns are stacked */
-	.wp-block-column:last-child {
-		margin-bottom: 0;
-	}
-
-	.wp-block-columns + .wp-block-columns {
-		margin-top: 0.2rem;
-	}
-
-	.wp-block-columns.alignwide + .wp-block-columns.alignwide {
-		margin-top: -0.8rem;
-	}
-
-	.wp-block-columns.alignfull + .wp-block-columns.alignfull {
-		margin-top: -1.8rem;
-  }
 }
 
 @media ( min-width: 600px ) {
