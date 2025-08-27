@@ -247,7 +247,7 @@ blockquote .logovo-image-number {
   max-width: 120px !important;
 }
 
-.logovo-book-cover a:hover img {
+.logovo-book-cover a img {
   transform-origin: center;
   transition: transform 0.3s ease;
   will-change: transform;
