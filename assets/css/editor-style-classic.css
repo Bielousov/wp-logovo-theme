@@ -57,7 +57,7 @@ body#tinymce.wp-editor.content { /* stylelint-disable-line no-duplicate-selector
 body#tinymce.wp-editor.content { /* stylelint-disable-line no-duplicate-selectors */
 	background: #f5efe0;
 	color: #000;
-	font-size: 21px;
+	font-size: 18px;
 	letter-spacing: -0.015em;
 	margin: 0 auto;
 	max-width: calc(100% - 40px);
@@ -216,25 +216,25 @@ body#tinymce.wp-editor.content h6 {
 }
 
 body#tinymce.wp-editor.content h1 {
-	font-size: 84px;
+	font-size: 60px;
 	font-weight: 800;
 	line-height: 1.138888889;
 }
 
 body#tinymce.wp-editor.content h2 {
-	font-size: 48px;
+	font-size: 35px;
 }
 
 body#tinymce.wp-editor.content h3 {
-	font-size: 40px;
+	font-size: 30px;
 }
 
 body#tinymce.wp-editor.content h4 {
-	font-size: 32px;
+	font-size: 25px;
 }
 
 body#tinymce.wp-editor.content h5 {
-	font-size: 24px;
+	font-size: 21px;
 }
 
 body#tinymce.wp-editor.content h6 {
@@ -602,4 +602,11 @@ body#tinymce.wp-editor.content ul.wp-block-gallery {
 
 body#tinymce.wp-editor.content ul.wp-block-gallery li {
 	margin-left: 0;
+}
+
+
+/* BLOCK: BOOK COVER */
+
+body#tinymce.wp-editor.content .logovo-book-cover {
+	max-width: 120px;
 }
