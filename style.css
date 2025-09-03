@@ -130,13 +130,6 @@ body {
   text-align: left;
 }
 
-@supports (font-variation-settings: normal) {
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,
-      sans-serif;
-  }
-}
-
 #site-content {
   flex: 1;
   overflow: hidden;
@@ -231,14 +224,6 @@ path {
 }
 
 /* Fonts ------------------------------------- */
-
-/* ----------------------------------------------
-Inter variable font. Usage:
-
-@supports (font-variation-settings: normal) {
-	html { font-family: 'Inter var', sans-serif; }
-}
----------------------------------------------- */
 
 @font-face {
   font-family: "Inter var";
@@ -635,18 +620,15 @@ object {
   max-width: 100%;
 }
 
-figcaption {
-  max-width: 80rem;
-  margin: 1em auto;
-}
-
 figcaption,
 .wp-caption-text {
   display: block;
+  margin: 1em auto;
   color: #6d6d6d;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.2;
+  text-align: center;
 }
 
 figcaption a,
@@ -747,21 +729,6 @@ button,
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,
     sans-serif;
   line-height: 1;
-}
-
-@supports (font-variation-settings: normal) {
-  input,
-  textarea,
-  button,
-  .button,
-  .faux-button,
-  .faux-button.more-link,
-  .read-more,
-  .wp-block-button__link,
-  .wp-block-file__button {
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,
-      sans-serif;
-  }
 }
 
 input,
@@ -2558,7 +2525,6 @@ body:not(.singular) main > article:first-of-type {
 }
 
 .featured-media figcaption {
-  text-align: center;
   width: calc(100% - 5rem);
 }
 
@@ -2783,15 +2749,6 @@ body:not(.singular) main > article:first-of-type {
     sans-serif;
 }
 
-@supports (font-variation-settings: normal) {
-  .entry-content cite,
-  .entry-content figcaption,
-  .entry-content .wp-caption-text {
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,
-      sans-serif;
-  }
-}
-
 /* Alignment Classes ------------------------- */
 
 .alignnone,
@@ -2906,14 +2863,6 @@ blockquote .alignwide {
 }
 
 /* Entry Media ------------------------------- */
-
-.alignfull > figcaption,
-.alignfull > .wp-caption-text {
-  width: calc(100% - 4rem);
-  max-width: 80rem;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .entry-content > .entry-media,
 .entry-content > .wp-caption {
@@ -3451,15 +3400,6 @@ div.comment:first-of-type {
     sans-serif;
 }
 
-@supports (font-variation-settings: normal) {
-  .widget-content cite,
-  .widget-content figcaption,
-  .widget-content .wp-caption-text {
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,
-      sans-serif;
-  }
-}
-
 /* Base List Widget -------------------------- */
 
 .widget_archive ul,
@@ -3989,12 +3929,6 @@ a.to-the-top > * {
     padding: 1.25em 2em;
   }
 
-  /* MEDIA */
-  figcaption,
-  .wp-caption-text {
-    margin-top: 1.8rem;
-  }
-
   /* Helper Classes ------------------------- */
 
   /* SECTIONS */
@@ -4362,13 +4296,6 @@ a.to-the-top > * {
     margin-right: 4rem;
   }
 
-  /* ENTRY MEDIA */
-
-  .alignfull > figcaption,
-  .alignfull > .wp-caption-text {
-    width: calc(100% - 8rem);
-  }
-
   /* Comments ------------------------------ */
 
   .comments-wrapper {
@@ -4709,14 +4636,6 @@ a.to-the-top > * {
     justify-content: flex-start;
   }
 
-  /* Sub Page ------------------------------ */
-
-  /* FEATURED MEDIA */
-
-  .featured-media figcaption {
-    width: 100%;
-  }
-
   /* Template: Full Width ------------------ */
 
   .template-full-width .wp-block-image .alignleft {
@@ -4738,13 +4657,6 @@ a.to-the-top > * {
   }
 
   /* Entry Content ------------------------- */
-
-  /* ENTRY MEDIA */
-
-  .alignfull > figcaption,
-  .alignfull > .wp-caption-text {
-    width: calc(100% - 10rem);
-  }
 
   /* Comments ------------------------------ */
 
