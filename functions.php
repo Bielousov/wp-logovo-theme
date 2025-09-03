@@ -184,30 +184,30 @@ add_action('wp_enqueue_scripts', 'wps_deregister_styles', 100);
 /**
  * Register and Enqueue Styles.
  */
-function twentytwenty_register_styles()
+function theme_register_styles()
 {
 
 	$theme_version = wp_get_theme()->get('Version');
 
-	wp_enqueue_style('twentytwenty-style', get_stylesheet_uri(), array(), $theme_version);
+	wp_enqueue_style('theme-style', get_stylesheet_uri(), array(), $theme_version);
 	wp_enqueue_style('block-style', get_template_directory_uri() . '/assets/css/style-block.css', null, $theme_version);
 	wp_enqueue_style('vendor-style', get_template_directory_uri() . '/assets/css/style-vendor.css', null, $theme_version);
-	wp_enqueue_style('logovo-brand-style', get_template_directory_uri() . '/logovo.css', null, $theme_version);
+	wp_enqueue_style('logovo-style', get_template_directory_uri() . '/logovo.css', null, $theme_version);
 
 
 	// Add output of Customizer settings as inline style.
-	wp_add_inline_style('twentytwenty-style', twentytwenty_get_customizer_css('front-end'));
+	wp_add_inline_style('theme-custom-style', twentytwenty_get_customizer_css('front-end'));
 
 	// Add print CSS.
-	wp_enqueue_style('twentytwenty-print-style', get_template_directory_uri() . '/print.css', null, $theme_version, 'print');
+	wp_enqueue_style('theme-print-style', get_template_directory_uri() . '/print.css', null, $theme_version, 'print');
 }
 
-add_action('wp_enqueue_scripts', 'twentytwenty_register_styles');
+add_action('wp_enqueue_scripts', 'theme_register_styles');
 
 /**
  * Register and Enqueue Scripts.
  */
-function twentytwenty_register_scripts()
+function theme_register_scripts()
 {
 	if (function_exists('amp_is_request') && amp_is_request()) {
 		return;
@@ -219,8 +219,8 @@ function twentytwenty_register_scripts()
 		wp_enqueue_script('comment-reply');
 	}
 
-	wp_enqueue_script('twentytwenty-js', get_template_directory_uri() . '/assets/js/index.js', array(), $theme_version, false);
-	wp_script_add_data('twentytwenty-js', 'async', true);
+	wp_enqueue_script('theme-js', get_template_directory_uri() . '/assets/js/index.js', array(), $theme_version, false);
+	wp_script_add_data('theme-js', 'async', true);
 
 	wp_enqueue_script('logovo-image-numbers', get_template_directory_uri() . '/assets/js/image-numbers.js', array('jquery'), $theme_version, false);
 	wp_script_add_data('logovo-image-numbers', 'defer', true);
@@ -235,13 +235,13 @@ function twentytwenty_register_scripts()
 	wp_script_add_data('logovo-parallax', 'defer', true);
 }
 
-add_action('wp_enqueue_scripts', 'twentytwenty_register_scripts');
+add_action('wp_enqueue_scripts', 'theme_register_scripts');
 
 
 /**
  * Register navigation menus uses wp_nav_menu in five places.
  */
-function twentytwenty_menus()
+function theme_menus()
 {
 
 	$locations = array(
@@ -255,7 +255,7 @@ function twentytwenty_menus()
 	register_nav_menus($locations);
 }
 
-add_action('init', 'twentytwenty_menus');
+add_action('init', 'theme_menus');
 
 /**
  * Get the information about the logo.
@@ -264,7 +264,7 @@ add_action('init', 'twentytwenty_menus');
  *
  * @return string $html
  */
-function twentytwenty_get_custom_logo($html)
+function theme_get_custom_logo($html)
 {
 
 	$logo_id = get_theme_mod('custom_logo');
@@ -311,25 +311,38 @@ function twentytwenty_get_custom_logo($html)
 	return $html;
 }
 
-add_filter('get_custom_logo', 'twentytwenty_get_custom_logo');
+add_filter('get_custom_logo', 'theme_get_custom_logo');
 
+/**
+ * Overwrite default more tag with styling and screen reader markup.
+ *
+ * @param string $html The default output HTML for the more tag.
+ *
+ * @return string $html
+ */
+function theme_read_more_tag($html)
+{
+	return preg_replace('/<a(.*)>(.*)<\/a>/iU', sprintf('<div class="read-more-button-wrap"><a$1><span class="faux-button">$2</span> <span class="screen-reader-text">"%1$s"</span></a></div>', get_the_title(get_the_ID())), $html);
+}
+
+add_filter('the_content_more_link', 'theme_read_more_tag');
 
 /**
  * Include a skip to content link at the top of the page so that users can bypass the menu.
  */
-function twentytwenty_skip_link()
+function theme_skip_link()
 {
 	echo '<a class="skip-link screen-reader-text" href="#site-content">' . __('Перейти к содержанию', 'twentytwenty') . '</a>';
 }
 
-add_action('wp_body_open', 'twentytwenty_skip_link', 5);
+add_action('wp_body_open', 'theme_skip_link', 5);
 
 /**
  * Register widget areas.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function twentytwenty_sidebar_registration()
+function theme_sidebar_registration()
 {
 
 	// Arguments used in all register_sidebar() calls.
@@ -377,12 +390,12 @@ function twentytwenty_sidebar_registration()
 	);
 }
 
-add_action('widgets_init', 'twentytwenty_sidebar_registration');
+add_action('widgets_init', 'theme_sidebar_registration');
 
 /**
  * Enqueue supplemental block editor styles.
  */
-function twentytwenty_block_editor_styles()
+function theme_block_editor_styles()
 {
 
 	$css_dependencies = array();
@@ -398,12 +411,12 @@ function twentytwenty_block_editor_styles()
 	wp_enqueue_script('twentytwenty-block-editor-script', get_theme_file_uri('/assets/js/editor-script-block.js'), array('wp-blocks', 'wp-dom'), wp_get_theme()->get('Version'), true);
 }
 
-add_action('enqueue_block_editor_assets', 'twentytwenty_block_editor_styles', 1, 1);
+add_action('enqueue_block_editor_assets', 'theme_block_editor_styles', 1, 1);
 
 /**
  * Enqueue classic editor styles.
  */
-function twentytwenty_classic_editor_styles()
+function theme_classic_editor_styles()
 {
 
 	$classic_editor_styles = array(
@@ -413,7 +426,7 @@ function twentytwenty_classic_editor_styles()
 	add_editor_style($classic_editor_styles);
 }
 
-add_action('init', 'twentytwenty_classic_editor_styles');
+add_action('init', 'theme_classic_editor_styles');
 
 /**
  * Output Customizer settings in the classic editor.
@@ -423,7 +436,7 @@ add_action('init', 'twentytwenty_classic_editor_styles');
  *
  * @return array $mce_init TinyMCE styles.
  */
-function twentytwenty_add_classic_editor_customizer_styles($mce_init)
+function theme_add_classic_editor_customizer_styles($mce_init)
 {
 
 	$styles = twentytwenty_get_customizer_css('classic-editor');
@@ -437,22 +450,8 @@ function twentytwenty_add_classic_editor_customizer_styles($mce_init)
 	return $mce_init;
 }
 
-add_filter('tiny_mce_before_init', 'twentytwenty_add_classic_editor_customizer_styles');
+add_filter('tiny_mce_before_init', 'theme_add_classic_editor_customizer_styles');
 
-
-/**
- * Overwrite default more tag with styling and screen reader markup.
- *
- * @param string $html The default output HTML for the more tag.
- *
- * @return string $html
- */
-function twentytwenty_read_more_tag($html)
-{
-	return preg_replace('/<a(.*)>(.*)<\/a>/iU', sprintf('<div class="read-more-button-wrap"><a$1><span class="faux-button">$2</span> <span class="screen-reader-text">"%1$s"</span></a></div>', get_the_title(get_the_ID())), $html);
-}
-
-add_filter('the_content_more_link', 'twentytwenty_read_more_tag');
 
 /**
  * Enqueues scripts for customizer controls & settings.
@@ -461,7 +460,7 @@ add_filter('the_content_more_link', 'twentytwenty_read_more_tag');
  *
  * @return void
  */
-function twentytwenty_customize_controls_enqueue_scripts()
+function theme_customize_controls_enqueue_scripts()
 {
 	$theme_version = wp_get_theme()->get('Version');
 
@@ -476,7 +475,7 @@ function twentytwenty_customize_controls_enqueue_scripts()
 	wp_localize_script('twentytwenty-customize-controls', 'twentyTwentyBgColors', twentytwenty_get_customizer_color_vars());
 }
 
-add_action('customize_controls_enqueue_scripts', 'twentytwenty_customize_controls_enqueue_scripts');
+add_action('customize_controls_enqueue_scripts', 'theme_customize_controls_enqueue_scripts');
 
 /**
  * Enqueue scripts for the customizer preview.
@@ -485,7 +484,7 @@ add_action('customize_controls_enqueue_scripts', 'twentytwenty_customize_control
  *
  * @return void
  */
-function twentytwenty_customize_preview_init()
+function theme_customize_preview_init()
 {
 	$theme_version = wp_get_theme()->get('Version');
 
@@ -503,7 +502,7 @@ function twentytwenty_customize_preview_init()
 	);
 }
 
-add_action('customize_preview_init', 'twentytwenty_customize_preview_init');
+add_action('customize_preview_init', 'theme_customize_preview_init');
 
 /**
  * Get accessible color for an area.

@@ -1091,7 +1091,6 @@ figure.wp-block-table.is-style-stripes {
   }
 }
 
-
 @media (min-width: 1280px) {
   /* BLOCK: SEPARATOR */
 
@@ -1126,4 +1125,4 @@ figure.wp-block-table.is-style-stripes {
     /*rtl:ignore*/
     margin-right: 0;
   }
-
+}
