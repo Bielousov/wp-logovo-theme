@@ -264,11 +264,11 @@ blockquote .logovo-image-number {
   }
   .logovo-book-cover.alignright {
     margin-right: 0;
-    margin-left: calc(-1 * var(--entry-spacing));
+    margin-left: calc(0.5 * var(--entry-spacing));
   }
   .logovo-book-cover.alignleft {
     margin-left: 0;
-    margin-right: calc(-1 * var(--entry-spacing));
+    margin-right: calc(0.5 * var(--entry-spacing));
   }
 }
 
