@@ -985,11 +985,6 @@ section {
   margin-left: auto;
   margin-right: auto;
   max-width: 120rem;
-  width: calc(100% - 4rem);
-}
-
-.section-inner.max-percentage {
-  width: 100%;
 }
 
 .section-inner.full {
@@ -2393,11 +2388,11 @@ body:not(.singular) main > article:first-of-type {
 /* POST META */
 
 .post-meta-wrapper {
+  width: calc(100% - 4rem);
+  max-width: 100rem;
   margin-top: 2rem;
   margin-right: auto;
   margin-left: auto;
-  max-width: 100rem;
-  width: calc(100% - 4rem);
 }
 
 .post-meta {
@@ -2706,6 +2701,7 @@ body:not(.singular) main > article:first-of-type {
   text-decoration: none;
 }
 
+.entry-content,
 .entry-content p,
 .entry-content li {
   line-height: 1.6;
@@ -2732,7 +2728,7 @@ body:not(.singular) main > article:first-of-type {
 }
 
 /* Font Families ----------------------------- */
-
+.entry-content,
 .entry-content p,
 .entry-content ol,
 .entry-content ul,
@@ -2798,7 +2794,6 @@ blockquote .alignwide {
 .alignwide {
   max-width: 120rem;
   position: relative;
-  width: calc(100% - 4rem);
 }
 
 [class*="__inner-container"] > .alignwide {
@@ -2876,10 +2871,6 @@ blockquote .alignwide {
   max-height: 90vh;
   margin-left: auto;
   margin-right: auto;
-}
-.entry-content > .wp-caption .wp-caption-text {
-  width: calc(100% - 4rem);
-  text-align: center;
 }
 
 blockquote .entry-media {
@@ -4214,11 +4205,6 @@ a.to-the-top > * {
 
   .entry-content {
     font-size: 2rem;
-  }
-
-  .entry-content p,
-  .entry-content li {
-    line-height: 1.6;
   }
 
   .entry-content h1,
