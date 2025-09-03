@@ -254,17 +254,21 @@ blockquote .logovo-image-number {
   transform: rotate3d(1, 1, 1, 5deg);
 }
 
+.logovo-book-cover .wp-caption-text {
+  text-align: center;
+}
+
 @media (min-width: 1330px) {
   .logovo-book-cover {
     max-width: 150px !important;
   }
   .logovo-book-cover.alignright {
-    margin-right: calc((100% - 120rem + 8rem) / 2) !important;
-    margin-left: 5em;
+    margin-right: 0;
+    margin-left: calc(-1 * var(--entry-spacing));
   }
   .logovo-book-cover.alignleft {
-    margin-left: calc((100% - 120rem + 8rem) / 2) !important;
-    margin-right: 5em;
+    margin-left: 0;
+    margin-right: calc(-1 * var(--entry-spacing));
   }
 }
 
