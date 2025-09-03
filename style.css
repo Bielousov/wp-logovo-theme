@@ -126,7 +126,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,
     sans-serif;
   font-size: 1.6rem;
-  letter-spacing: -0.015em;
   text-align: left;
 }
 
@@ -273,7 +272,6 @@ h6,
   font-feature-settings: "lnum";
   font-variant-numeric: lining-nums;
   font-weight: 700;
-  letter-spacing: -0.0415625em;
   line-height: 1.25;
   margin: 3.5rem 0 2rem;
 }
@@ -308,7 +306,7 @@ h5,
 h6,
 .heading-size-6 {
   font-size: 1.6rem;
-  letter-spacing: 0.03125em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
@@ -760,8 +758,7 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  appearance: none;
   background: #fff;
   border-radius: 0;
   border-style: solid;
@@ -769,7 +766,6 @@ textarea {
   box-shadow: none;
   display: block;
   font-size: 1.6rem;
-  letter-spacing: -0.015em;
   margin: 0;
   max-width: 100%;
   padding: 1.5rem 1.8rem;
@@ -814,8 +810,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  appearance: none;
   background: var(--accent-color);
   border: none;
   border-radius: 0;
@@ -824,7 +819,6 @@ input[type="submit"] {
   display: inline-block;
   font-size: 1.5rem;
   font-weight: 600;
-  letter-spacing: 0.0333em;
   line-height: 1.25;
   margin: 0;
   opacity: 1;
@@ -1006,8 +1000,7 @@ section {
 /* Toggles ----------------------------------- */
 
 .toggle {
-  -moz-appearance: none;
-  -webkit-appearance: none;
+  appearance: none;
   color: inherit;
   cursor: pointer;
   font-family: inherit;
@@ -1028,7 +1021,6 @@ button.toggle {
   border-radius: 0;
   font-size: inherit;
   font-weight: 400;
-  letter-spacing: inherit;
   outline: none;
   padding: 0;
   text-transform: none;
@@ -1390,7 +1382,6 @@ body:not(.enable-search-modal) .header-titles-wrapper {
   font-style: italic;
   font-weight: 400;
   display: none;
-  letter-spacing: -0.0311em;
   transition: all 0.15s linear;
 }
 
@@ -1556,7 +1547,6 @@ ul.primary-menu {
   display: flex;
   font-size: 1.8rem;
   font-weight: 500;
-  letter-spacing: -0.0277em;
   flex-wrap: wrap;
   justify-content: flex-end;
   margin: -0.8rem 0 0 -1.6rem;
@@ -1871,7 +1861,6 @@ button.close-nav-toggle .toggle-text {
 .modal-menu > li > .ancestor-wrapper > a {
   font-size: 2rem;
   font-weight: 700;
-  letter-spacing: -0.0375em;
 }
 
 .modal-menu > li:last-child {
@@ -2130,7 +2119,6 @@ button.search-untoggle {
   border-radius: 0;
   color: inherit;
   font-size: 2rem;
-  letter-spacing: -0.0277em;
   height: 8rem;
   margin: 0 0 0 -2rem;
   max-width: calc(100% + 2rem);
@@ -2286,7 +2274,6 @@ body.template-full-width .entry-content {
 .archive-title {
   font-size: 2.4rem;
   font-weight: 700;
-  letter-spacing: -0.026666667em;
   margin: 0;
 }
 
@@ -2333,13 +2320,13 @@ body:not(.singular) main > article:first-of-type {
 }
 
 .entry-categories a {
+  margin: 0.5rem 0 0 1rem;
   border-bottom: 0.1rem solid currentColor;
+  transition: all 0.3s ease-in-out;
   font-weight: 700;
   letter-spacing: 0.03em;
-  margin: 0.5rem 0 0 1rem;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 0.3s ease-in-out;
 }
 
 .entry-categories a:focus,
@@ -2358,7 +2345,6 @@ body:not(.singular) main > article:first-of-type {
   color: #777;
   font-size: 2rem;
   font-weight: 300;
-  letter-spacing: -0.01em;
   line-height: 1.3;
 }
 
@@ -2381,7 +2367,6 @@ body:not(.singular) main > article:first-of-type {
 
 .singular .intro-text {
   font-size: 1.8rem;
-  letter-spacing: -0.02em;
   line-height: 1.4;
 }
 
@@ -2408,7 +2393,6 @@ body:not(.singular) main > article:first-of-type {
 
 .post-meta li {
   flex-shrink: 0;
-  letter-spacing: -0.01em;
   margin: 1rem 0 0 2rem;
   max-width: calc(100% - 2rem);
 }
@@ -2632,7 +2616,6 @@ body:not(.singular) main > article:first-of-type {
   align-items: center;
   display: flex;
   font-weight: 600;
-  letter-spacing: -0.02em;
   text-decoration: none;
   flex: 1;
 }
@@ -2735,7 +2718,6 @@ body:not(.singular) main > article:first-of-type {
 .entry-content dl,
 .entry-content dt {
   font-family: "Palatino", Garamond, "Times New Roman", serif;
-  letter-spacing: normal;
 }
 
 .entry-content cite,
@@ -2982,7 +2964,6 @@ div.comment:first-of-type {
 .comment-author {
   font-size: 1.8rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
 }
 
 .comment-author a {
@@ -3045,15 +3026,15 @@ div.comment:first-of-type {
 /* COMMENT FOOTER */
 
 .comment-footer-meta {
-  align-items: center;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 1.5rem 0 -1rem -1.5rem;
   font-size: 1.2rem;
   font-weight: 600;
-  justify-content: flex-start;
-  letter-spacing: 0.030833333em;
   line-height: 1;
-  margin: 1.5rem 0 -1rem -1.5rem;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
@@ -3219,7 +3200,6 @@ div.comment:first-of-type {
   display: block;
   font-size: 1.6rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
   margin: 0.5rem 0 0 0;
   white-space: nowrap;
 }
@@ -3595,7 +3575,6 @@ div.comment:first-of-type {
 .footer-menu {
   font-size: 1.8rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
 }
 
 .footer-menu li {
@@ -4294,9 +4273,8 @@ a.to-the-top > * {
 
   .comment-respond p.comment-notes,
   .comment-respond p.logged-in-as {
-    font-size: 1.8rem;
-    letter-spacing: -0.02em;
     margin: -2.5rem 0 4.4rem 0;
+    font-size: 1.8rem;
   }
 
   .comments .comment,
@@ -4746,7 +4724,6 @@ a.to-the-top > * {
 
   .singular .intro-text {
     font-size: 2.4rem;
-    letter-spacing: -0.03em;
     line-height: 1.375;
   }
 

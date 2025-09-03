@@ -254,17 +254,15 @@
 .wp-block-latest-posts a,
 .wp-block-latest-comments__comment-meta {
   font-weight: 700;
-  letter-spacing: -0.01em;
   line-height: 1.25;
 }
 
 .wp-block-latest-comments__comment-date,
 .wp-block-latest-posts__post-date {
+  margin-top: 0.15em;
   color: #6d6d6d;
   font-size: 0.7em;
   font-weight: 600;
-  letter-spacing: normal;
-  margin-top: 0.15em;
 }
 
 /* Block: Shared Media Styles ---------------- */
@@ -502,12 +500,11 @@ figure.wp-block-gallery.alignfull {
 }
 
 .wp-block-pullquote blockquote p {
+  max-width: 100%;
   font-family: inherit;
   font-size: 2.8rem;
   font-weight: 700;
   line-height: 1.178571429;
-  letter-spacing: -0.04em;
-  max-width: 100%;
 }
 
 .wp-block-pullquote p:last-of-type {
@@ -667,7 +664,6 @@ figure.wp-block-table.is-style-stripes {
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 700;
-  letter-spacing: -0.02em;
   line-height: 1.285;
 }
 
