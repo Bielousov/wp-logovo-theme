@@ -246,6 +246,7 @@ blockquote .logovo-image-number {
 
 .logovo-book-cover a img {
   border: solid 5px #ffca14;
+  box-shadow: 2px 2px 5px #aaa;
   transform-origin: center;
   transition: transform 0.3s ease;
   will-change: transform;
