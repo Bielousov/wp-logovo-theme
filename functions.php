@@ -196,7 +196,7 @@ function theme_register_styles()
 
 
 	// Add output of Customizer settings as inline style.
-	wp_add_inline_style('theme-custom-style', twentytwenty_get_customizer_css('front-end'));
+	wp_add_inline_style('theme-style', twentytwenty_get_customizer_css('front-end'));
 
 	// Add print CSS.
 	wp_enqueue_style('theme-print-style', get_template_directory_uri() . '/print.css', null, $theme_version, 'print');
