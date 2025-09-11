@@ -2844,7 +2844,7 @@ blockquote .alignwide {
 .entry-content > .entry-media,
 .entry-content > .wp-caption {
   position: relative;
-  width: auto;
+  width: auto !important;
   margin: 0 calc(-1 * var(--entry-spacing)) calc(0.5 * var(--entry-spacing));
 }
 .entry-content > .entry-media img,
@@ -3034,7 +3034,7 @@ div.comment:first-of-type {
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 1;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03em;y
   text-transform: uppercase;
 }
 

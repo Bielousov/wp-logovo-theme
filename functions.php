@@ -643,17 +643,29 @@ function twentytwenty_get_elements_array()
 ================================================== */
 function wrap_content_images($content)
 {
-	return preg_replace(
-		array(
-			'/(<figure .*)(wp-caption)(.*>)/iU',
-			'/(<img.*(size-medium|size-large|size-full).*>)/iU'
-		),
-		array(
-			'\1\2 entry-media\3',
-			'<figure class="entry-media">\1</figure>'
-		),
-		$content
-	);
+  $content = preg_replace(
+    '/(<figure .*)(wp-caption)(.*>)/iU',
+	'\1\2 entry-media\3',
+	$content
+  );
+
+  $content = preg_replace_callback(
+    '/<img[^>]*(?:size-medium|size-large|size-full)[^>]*>/i',
+    function ($matches) use ($content) {
+        $img = $matches[0];
+
+        // Check if image is already inside a <figure class="entry-media"> (approximation)
+        // Look back up to 200 chars for opening figure tag
+        if (preg_match('/<figure[^>]+class=["\'][^"\']*entry-media[^"\']*["\'][^>]*>[^<]{0,200}$/i', substr($content, 0, strpos($content, $img)))) {
+            return $img; // skip wrapping
+        }
+
+        return '<figure class="entry-media">' . $img . '</figure>';
+    },
+    $content
+  );
+	
+  return $content;
 }
 
 add_filter('the_content', 'wrap_content_images', 20);
