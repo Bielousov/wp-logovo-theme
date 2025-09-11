@@ -2841,12 +2841,14 @@ blockquote .alignwide {
 
 /* Entry Media ------------------------------- */
 
-.entry-content > .entry-media,
-.entry-content > .wp-caption {
+.entry-content > .entry-media {
   position: relative;
   width: auto !important;
+}
+.entry-content > .entry-media:not(.alignleft):not(.alignright) {
   margin: 0 calc(-1 * var(--entry-spacing)) calc(0.5 * var(--entry-spacing));
 }
+
 .entry-content > .entry-media img,
 .entry-content > .wp-caption img {
   width: auto;
