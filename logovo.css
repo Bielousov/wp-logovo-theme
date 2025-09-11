@@ -243,7 +243,12 @@ blockquote .logovo-image-number {
  * Book template
  **/
 .logovo-book-cover {
+  width: auto !important;
   max-width: 120px !important;
+}
+
+.logovo-book-cover img {
+  width: auto;
 }
 
 .logovo-book-cover a img {
