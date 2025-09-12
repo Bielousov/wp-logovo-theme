@@ -240,6 +240,34 @@ blockquote .logovo-image-number {
 }
 
 /**
+ * Panorama
+ **/
+
+.entry-content > .entry-media.panorama-canvas {
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  width: 100vw;
+  overflow: auto;
+  margin-left: calc(-0.5 * (100vw - 100%));
+  margin-right: calc(-0.5 * (100vw - 100%));
+  transform: translateZ(0);
+  transition: opacity 0.5s;
+}
+
+.entry-content > .entry-media.panorama-loading {
+  opacity: 0.5;
+}
+
+.entry-content > .entry-media.panorama-canvas img.panorama {
+  max-width: initial;
+  margin: 0 auto !important;
+  height: min(60vw, 60vh);
+  max-height: 720px;
+  min-height: 300px;
+  cursor: move;
+}
+
+/**
  * Book template
  **/
 .logovo-book-cover {
