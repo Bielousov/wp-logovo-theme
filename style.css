@@ -3197,6 +3197,7 @@ div.comment:first-of-type {
 /* -------------------------------------------------------------------------- */
 .x-pagination__all {
   position: relative;
+  padding: 0;
 }
 .x-pagination__all:before,
 .x-pagination__all:after {
