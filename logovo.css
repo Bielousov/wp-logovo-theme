@@ -246,10 +246,9 @@ blockquote .logovo-image-number {
 .entry-content > .entry-media.panorama-canvas {
   -webkit-overflow-scrolling: touch;
   position: relative;
-  width: 100vw;
   overflow: auto;
-  margin-left: calc(-0.5 * (100vw - 100%));
-  margin-right: calc(-0.5 * (100vw - 100%));
+  margin-left: calc(-0.5 * (100vw - 100%)) !important;
+  margin-right: calc(-0.5 * (100vw - 100%)) !important;
   transform: translateZ(0);
   transition: opacity 0.5s;
 }
