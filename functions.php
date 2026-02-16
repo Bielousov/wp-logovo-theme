@@ -66,6 +66,31 @@ function twentytwenty_theme_support()
 	remove_image_size('1536x1536');
 	remove_image_size('2048x2048');
 
+	// Re-register medium_large size
+    remove_image_size('medium_large');
+    add_image_size('medium_large', 1200, 1200, false);
+
+	// Thumbnail (200x200 crop)
+    update_option( 'thumbnail_size_w', 640 );
+    update_option( 'thumbnail_size_h', 640 );
+    update_option( 'thumbnail_crop', 1 );
+
+    // Medium (960 max, no crop)
+    update_option( 'medium_size_w', 960 );
+    update_option( 'medium_size_h', 960 );
+
+	// Medium Large (1200 max, no crop)
+    update_option( 'medium_size_w', 1200 );
+    update_option( 'medium_size_h', 1200 );
+
+    // Large (1920 max, no crop)
+    update_option( 'large_size_w', 1920 );
+    update_option( 'large_size_h', 1920 );
+
+
+	// Related content
+	add_image_size( 'shareaholic-thumbnail', '640', '640', false );
+
 	// Custom logo.
 	$logo_width  = 120;
 	$logo_height = 90;
