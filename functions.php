@@ -141,9 +141,20 @@ function twentytwenty_theme_support()
 	 */
 	$loader = new TwentyTwenty_Script_Loader();
 	add_filter('script_loader_tag', array($loader, 'filter_script_loader_tag'), 10, 2);
+
+	// Rename existing thumbnail labels
+	add_filter( 'image_size_names_choose', function( $sizes ) {
+		$sizes['thumbnail']       = 'Thumbnail';
+		$sizes['medium']          = 'Medium';
+		$sizes['medium_large']    = 'Medium Large';
+		$sizes['large']           = 'Large';
+		$sizes['shareaholic-thumbnail'] = 'Shareaholic Thumbnail';
+		return $sizes;
+	});
 }
 
 add_action('after_setup_theme', 'twentytwenty_theme_support');
+
 
 /**
  * REQUIRED FILES
@@ -680,6 +691,29 @@ function responsive_image_sizes($sizes, $size)
 	return '(min-width: 1200px) 1200px, 100vw';
 }
 add_filter('wp_calculate_image_sizes', 'responsive_image_sizes', 10, 2);
+
+/**
+ * Remove specific sizes from WordPress srcset
+ */
+function filter_srcset_sizes( $sources, $size_array, $image_src, $image_meta, $attachment_id ) {
+
+    foreach ( $sources as $width => $source ) {
+
+        // Remove Full size (original upload)
+        if ( isset( $source['url'] ) && strpos( $source['url'], basename( $image_meta['file'] ) ) !== false ) {
+            unset( $sources[ $width ] );
+            continue;
+        }
+
+        // Remove Large size (adjust 1200 if needed)
+        if ( isset( $source['value'] ) && $source['value'] > 1200 ) {
+            unset( $sources[ $width ] );
+        }
+    }
+
+    return $sources;
+}
+add_filter( 'wp_calculate_image_srcset', 'filter_srcset_sizes', 10, 5 );
 
 function wp_redefine_locale($locale)
 {
