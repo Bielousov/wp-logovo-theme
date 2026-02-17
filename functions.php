@@ -62,18 +62,18 @@ function twentytwenty_theme_support()
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support('post-thumbnails');
+	remove_image_size('shareaholic-thumbnail');
 
 	remove_image_size('1536x1536');
 	remove_image_size('2048x2048');
 
-	// Re-register medium_large size
-    remove_image_size('medium_large');
-    add_image_size('medium_large', 1200, 1200, false);
-
 	// Thumbnail (200x200 crop)
-    update_option( 'thumbnail_size_w', 640 );
-    update_option( 'thumbnail_size_h', 640 );
+    update_option( 'thumbnail_size_w', 200 );
+    update_option( 'thumbnail_size_h', 200 );
     update_option( 'thumbnail_crop', 1 );
+
+	// Small 768 max, no crop
+    add_image_size('small', 768, 768, false);
 
     // Medium (960 max, no crop)
     update_option( 'medium_size_w', 960 );
@@ -87,9 +87,6 @@ function twentytwenty_theme_support()
     update_option( 'large_size_w', 1920 );
     update_option( 'large_size_h', 1920 );
 
-
-	// Related content
-	add_image_size( 'shareaholic-thumbnail', '640', '640', false );
 
 	// Custom logo.
 	$logo_width  = 120;
@@ -170,6 +167,7 @@ function twentytwenty_theme_support()
 	// Rename existing thumbnail labels
 	add_filter( 'image_size_names_choose', function( $sizes ) {
 		$sizes['thumbnail']       = 'Thumbnail';
+		$sizes['small']           = 'Small';
 		$sizes['medium']          = 'Medium';
 		$sizes['medium_large']    = 'Medium Large';
 		$sizes['large']           = 'Large';
@@ -766,5 +764,5 @@ remove_action('admin_print_styles', 'print_emoji_styles');
 
 /* Update Shareaholic thumbnail size to match custom size */
 add_filter('shareaholic_related_thumb_size', function($size){
-    return 'shareaholic-thumb';
+    return 'small';
 });
