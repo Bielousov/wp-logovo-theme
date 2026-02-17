@@ -4,7 +4,7 @@
   	let throttlePaginationReflow;
     /* Scroll pagination to current page */
     const setPaginationPosition = () => {
-        const $navPagination = $('.x-pagination__all ul.page-numbers');
+        const $navPagination = $('.logovo-pagination__all ul.page-numbers');
         const $currentPage = $navPagination.find('li:has(.page-numbers.current)');
 
         if (!$navPagination.length || !$currentPage.length) {

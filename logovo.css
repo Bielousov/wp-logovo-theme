@@ -634,3 +634,102 @@ blockquote .logovo-image-number {
     background-image: url(/wp-content/themes/wp-logovo-theme/assets/images/footer-mountains.webp);
   }
 }
+
+/* -------------------------------------------------------------------------- */
+/*	Pagination
+/* -------------------------------------------------------------------------- */
+
+.logovo-pagination {
+  --pagination-base-color: 246, 246, 246;
+  padding: 0;
+}
+
+.logovo-pagination__all {
+  position: relative;
+}
+.logovo-pagination__all:before,
+.logovo-pagination__all:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 2rem;
+  z-index: 2;
+  width: 5rem;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    rgba(var(--pagination-base-color), 1) 0%,
+    rgba(var(--pagination-base-color), 0) 100%
+  );
+}
+.logovo-pagination__all:before {
+  left: 0;
+}
+.logovo-pagination__all:after {
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.logovo-pagination ul.page-numbers {
+  transform: translateZ(0);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: -3rem 1rem 0;
+  padding: 0 1rem 2rem;
+  list-style: none;
+  font-size: 1.8rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Scrollbar width */
+.logovo-pagination ul.page-numbers::-webkit-scrollbar {
+  height: 8px;
+}
+
+/* Scrollbar track (background) */
+.logovo-pagination ul.page-numbers::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+}
+
+/* Scrollbar thumb (the draggable part) */
+.logovo-pagination ul.page-numbers::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  border: 3px solid rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+/* Hover state */
+.logovo-pagination ul.page-numbers::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.logovo-pagination ul.page-numbers li {
+  display: inline;
+  margin: 0;
+}
+.logovo-pagination ul.page-numbers li ~ li::before {
+  content: "•";
+  color: #999;
+  font-size: 1rem;
+  font-weight: bold;
+  vertical-align: middle;
+}
+.logovo-pagination ul.page-numbers .page-numbers {
+  display: inline-block;
+  width: 6rem;
+  transition: font-size 0.5s;
+  line-height: 3rem;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.logovo-pagination ul.page-numbers .page-numbers.current,
+.logovo-pagination ul.page-numbers .page-numbers:hover {
+  font-size: 200%;
+}
+.logovo-pagination__prev-next {
+  display: none;
+}

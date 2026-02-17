@@ -31,9 +31,8 @@ License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
 	9.  Post: Single
 	10. Entry Content
 	11. Comments
-	12. Site Pagination
-	13. Site Footer
-	14. Media Queries
+	12. Site Footer
+	13. Media Queries
 
 ----------------------------------------------------------------------------- */
 
@@ -3191,80 +3190,6 @@ div.comment:first-of-type {
   text-decoration: underline;
 }
 
-/* -------------------------------------------------------------------------- */
-
-/*	12. Site Pagination
-/* -------------------------------------------------------------------------- */
-.x-pagination {
-  padding: 0;
-}
-
-.x-pagination__all {
-  position: relative;
-}
-.x-pagination__all:before,
-.x-pagination__all:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 2rem;
-  z-index: 2;
-  width: 5rem;
-  pointer-events: none;
-}
-.x-pagination__all:before {
-  left: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(249, 249, 249, 1) 0%,
-    rgba(249, 249, 249, 0) 100%
-  );
-}
-.x-pagination__all:after {
-  right: 0;
-  background: linear-gradient(
-    270deg,
-    rgba(249, 249, 249, 1) 0%,
-    rgba(249, 249, 249, 0) 100%
-  );
-}
-
-.x-pagination ul.page-numbers {
-  transform: translateZ(0);
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin: -3rem 0 0;
-  padding: 0 4rem 3rem;
-  list-style: none;
-  font-size: 1.8rem;
-  text-align: center;
-  white-space: nowrap;
-}
-.x-pagination ul.page-numbers li {
-  display: inline;
-  margin: 0;
-}
-.x-pagination ul.page-numbers li ~ li::before {
-  content: "•";
-  vertical-align: middle;
-  font-size: 1rem;
-}
-.x-pagination ul.page-numbers .page-numbers {
-  display: inline-block;
-  width: 6rem;
-  transition: font-size 0.5s;
-  line-height: 3rem;
-  text-decoration: none;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-.x-pagination ul.page-numbers .page-numbers.current,
-.x-pagination ul.page-numbers .page-numbers:hover {
-  font-size: 200%;
-}
-.x-pagination__prev-next {
-  display: none;
-}
 
 /* -------------------------------------------------------------------------- */
 
@@ -3541,7 +3466,7 @@ div.comment:first-of-type {
 
 /* -------------------------------------------------------------------------- */
 
-/*	13. Site Footer
+/*	12. Site Footer
 /* -------------------------------------------------------------------------- */
 
 .footer,
@@ -3696,7 +3621,7 @@ a.to-the-top > * {
 }
 
 /* -------------------------------------------------------------------------- */
-/*	14. Media Queries
+/*	13. Media Queries
 /* -------------------------------------------------------------------------- */
 
 @media (max-width: 479px) {
