@@ -43,7 +43,7 @@ License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
 
 :root {
   --accent-color: #0086cc;
-  --cover-height: 85vh;
+  --cover-height: min(85vh, 1200px);
 }
 
 /* -------------------------------------------------------------------------- */
