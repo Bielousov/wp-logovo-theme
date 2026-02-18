@@ -480,8 +480,10 @@ blockquote .logovo-image-number {
   
   &::before {
     content: 'Рекомендую:';
-    margin-right: .5em;
-    font-size: 80%;
+    display: block;
+    margin-bottom: .25em;
+    font-size: 75%;
+    font-weight: 300;
   }
 }
 
