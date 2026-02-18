@@ -769,19 +769,7 @@ add_filter('image_size_names_choose', function($sizes){
     }
     return $sizes;
 });
-add_action('admin_init', function() {
-    $attachments = get_posts([
-        'post_type' => 'attachment',
-        'post_status' => 'inherit',
-        'numberposts' => -1,
-    ]);
-
-    foreach($attachments as $attachment){
-        $meta = wp_get_attachment_metadata($attachment->ID);
-        if(isset($meta['sizes']['shareaholic-thumbnail'])){
-            // Replace with small
-            $meta['sizes']['shareaholic-thumbnail'] = $meta['sizes']['small'] ?? null;
-            wp_update_attachment_metadata($attachment->ID, $meta);
-        }
-    }
+add_filter('intermediate_image_sizes_advanced', function($sizes){
+    unset($sizes['shareaholic-thumbnail']);
+    return $sizes;
 });
