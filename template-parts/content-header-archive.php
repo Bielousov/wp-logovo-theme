@@ -37,8 +37,6 @@
     if (function_exists('the_subtitle')) the_subtitle('<h3 class="entry-subtitle"><a href="' . esc_url(get_permalink()) . '">', '</a></h3>');
 
     // Default to displaying the post meta.
-    if (!has_category('sponsored')) {
-        twentytwenty_the_post_meta(get_the_ID(), 'single-top');
-    }
+    twentytwenty_the_post_meta(get_the_ID(), 'single-top');
     ?>
 </div><!-- .entry-header -->
