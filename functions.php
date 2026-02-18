@@ -173,6 +173,19 @@ function theme_support()
 		$sizes['large']           = 'Large';
 
 		unset($sizes['shareaholic-thumbnail']);
+
+		add_filter('image_size_names_choose', function($sizes){
+		
+		// Desired order by width (low → high)
+		$custom_order = ['thumbnail','small','medium','medium_large','large','full'];
+		$sorted = [];
+		foreach($custom_order as $key){
+			if(isset($sizes[$key])){
+				$sorted[$key] = $sizes[$key];
+			}
+		}
+		return $sorted;
+	});
 		return $sizes;
 	});
 }
