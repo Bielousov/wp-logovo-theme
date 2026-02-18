@@ -8,19 +8,22 @@
  * @since 1.0.0
  */
 
+$with_backfill = !is_page_template('templates/template-video.php');
 $featured_image_url = null;
 
-if (!post_password_required()) {
+if ($with_backfill && !post_password_required()) {
     $featured_image_url = esc_url(get_the_post_thumbnail_url(get_the_ID(), 'medium'));
+} else {
+	$with_backfill = false;
 }
 
 ?>
 
-<header class="entry-header logovo-entry-header header-footer-group has-text-align-center">
+<header class="entry-header logovo-entry-header <?php if ($with_backfill) echo 'logovo-entry-header-with-backfill'; ?> header-footer-group has-text-align-center">
 
 	<?php
-	if ($featured_image_url !== null && !is_page_template('templates/template-video.php')) {
-		echo '<img src="' . $featured_image_url . '" alt="' . get_the_title() . '" class="logovo-entry-header-backfill" />';
+	if ($with_backfill && $featured_image_url !== null) {
+		echo '<img src="' . $featured_image_url . '" alt="' . get_the_title() . '" class="logovo-entry-header-backfill-image" />';
 	}
 	?>
 

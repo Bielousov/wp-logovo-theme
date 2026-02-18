@@ -75,10 +75,9 @@
 .logovo-entry-header {
   position: relative;
   overflow: hidden;
-  max-width: 175rem;
 }
 
-.logovo-entry-header-backfill {
+.logovo-entry-header-backfill-image {
   position: absolute;
   z-index: 0;
   width: 100%;
@@ -93,16 +92,18 @@
   z-index: 1;
 }
 
-.logovo-entry-header .entry-title {
+.logovo-entry-header-with-backfill .entry-title {
   text-shadow: 0 1px 0 #ffffff99;
 }
 
-@media (min-width: 700px) {
-  .logovo-entry-header {
+@media (min-width: 175rem) {
+  .logovo-entry-header-with-backfill {
+    max-width: 175rem;
     margin: 3rem auto 0;
     border-radius: 1rem;
   }
 }
+
 
 
 /**
