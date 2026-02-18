@@ -39,7 +39,7 @@ $archive_subtitle = '';
 			if ($i > 1) {
 				echo '<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true" />';
 
-				if ($i == 2) {
+				if ($i == 6) {
 					echo '<div class="featured-media-inner section-inner">';
 					the_ad_group(647);
 					echo '</div>';
