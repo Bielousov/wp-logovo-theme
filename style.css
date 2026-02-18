@@ -4616,7 +4616,8 @@ a.to-the-top > * {
 
   /* Template: Cover Template -------------- */
 
-  .cover-header + .post-inner {
+  .template-cover + .post-inner,
+  .template-video + .post-inner {
     --entry-spacing: 10rem;
   }
 
