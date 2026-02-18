@@ -467,10 +467,10 @@ blockquote .logovo-image-number {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
-.logovo-m10n-block-recommended p:not(:last-child) {
+.logovo-m10n-recommended p:not(:last-child) {
   margin-bottom: .5em;
 }
 
@@ -507,6 +507,7 @@ blockquote .logovo-image-number {
 
   .logovo-m10n-block-content {
     padding: 4rem;
+    font-size: 1.6rem;
   }
 
   .logovo-m10n-block-image {
