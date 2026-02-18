@@ -171,7 +171,8 @@ function theme_support()
 		$sizes['medium']          = 'Medium';
 		$sizes['medium_large']    = 'Medium Large';
 		$sizes['large']           = 'Large';
-		$sizes['shareaholic-thumbnail'] = 'Shareaholic Thumbnail';
+
+		unset($sizes['shareaholic-thumbnail']);
 		return $sizes;
 	});
 }
