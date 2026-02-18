@@ -16,7 +16,7 @@
 <?php
   $isShort = get_post_meta(get_the_ID(), 'ad-post', true);
 
-  get_template_part( 'template-parts/entry-header' );
+  get_template_part( 'template-parts/content-header-archive' );
 
   if (!$isShort) {
     get_template_part( 'template-parts/featured-image' );

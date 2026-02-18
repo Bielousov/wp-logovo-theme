@@ -67,7 +67,7 @@
 																												?>></div>
 
 				<header class="entry-header has-text-align-center">
-					<div class="entry-header-inner section-inner medium">
+					<div class="section-inner medium">
 						<?php
 
 						/**
@@ -132,7 +132,7 @@
 							</a><!-- .to-the-content -->
 						</div><!-- .to-the-content-wrapper -->
 
-					</div><!-- .entry-header-inner -->
+					</div>
 				</header><!-- .entry-header -->
 
 			</div><!-- .cover-header-inner -->

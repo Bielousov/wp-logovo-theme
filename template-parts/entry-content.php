@@ -9,7 +9,7 @@
   }
 
   if (!is_page_template('templates/template-full-headless.php')) {
-    get_template_part('template-parts/entry-header');
+    get_template_part('template-parts/content-header-single');
   }
 ?>
 

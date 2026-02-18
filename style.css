@@ -3977,7 +3977,7 @@ a.to-the-top > * {
   /* POST HEADER */
 
   .singular .entry-header {
-    padding: 8rem 0;
+    padding: 6rem 0;
   }
 
   .entry-subtitle {
@@ -4589,13 +4589,6 @@ a.to-the-top > * {
 
 @media (min-width: 1220px) {
   /* Element Base -------------------------- */
-
-  /* TITLES */
-
-  h1,
-  .heading-size-1 {
-    font-size: 7.5rem;
-  }
 
   /* PRIMARY MENU */
 
