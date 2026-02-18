@@ -467,6 +467,22 @@ blockquote .logovo-image-number {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+  font-size: 1.6rem;
+}
+
+.logovo-m10n-block-recommended p:not(:last-child) {
+  margin-bottom: .5em;
+}
+
+.logovo-m10n-recommended h3 {
+  margin-bottom: .5em;
+  font-size: 2.6rem;
+  
+  &::before {
+    content: 'Рекомендую:';
+    margin-right: .5em;
+    font-size: 80%;
+  }
 }
 
 @media (min-width: 782px) {
@@ -491,22 +507,6 @@ blockquote .logovo-image-number {
 
   .logovo-m10n-block-content {
     padding: 4rem;
-    font-size: 1.6rem;
-  }
-
-  .logovo-m10n-block-content p:not(:last-child) {
-    margin-bottom: .5em;
-  }
-
-  .logovo-m10n-recommended h3 {
-    margin-bottom: .5em;
-    font-size: 2.6rem;
-    
-    &::before {
-      content: 'Рекомендую:';
-      margin-right: .5em;
-      font-size: 80%;
-    }
   }
 
   .logovo-m10n-block-image {
