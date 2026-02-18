@@ -74,6 +74,7 @@ function twentytwenty_theme_support()
 
 	// Small 768 max, no crop
     add_image_size('small', 768, 768, false);
+	add_image_size('shareaholic-thumbnail', 768, 768, false);
 
     // Medium (960 max, no crop)
     update_option( 'medium_size_w', 960 );
