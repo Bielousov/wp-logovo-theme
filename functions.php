@@ -32,7 +32,7 @@
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function twentytwenty_theme_support()
+function theme_support()
 {
 
 	// Add default posts and comments RSS feed links to head.
@@ -74,7 +74,6 @@ function twentytwenty_theme_support()
 
 	// Small 768 max, no crop
     add_image_size('small', 768, 768, false);
-	add_image_size('shareaholic-thumbnail', 768, 768, false);
 
     // Medium (960 max, no crop)
     update_option( 'medium_size_w', 960 );
@@ -177,7 +176,7 @@ function twentytwenty_theme_support()
 	});
 }
 
-add_action('after_setup_theme', 'twentytwenty_theme_support');
+add_action('after_setup_theme', 'theme_support');
 
 
 /**
@@ -764,6 +763,9 @@ remove_action('admin_print_scripts', 'print_emoji_detection_script');
 remove_action('admin_print_styles', 'print_emoji_styles');
 
 /* Update Shareaholic thumbnail size to match custom size */
-add_filter('shareaholic_related_thumb_size', function($size){
-    return 'small';
+add_filter('image_size_names_choose', function($sizes){
+    if(isset($sizes['shareaholic-thumbnail'])){
+        $sizes['shareaholic-thumbnail'] = $sizes['small']; // Replace label
+    }
+    return $sizes;
 });
