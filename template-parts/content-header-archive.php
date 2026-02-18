@@ -9,7 +9,7 @@
  */
 ?>
 
-<div class="entry-header has-text-align-center">
+<div class="entry-header section-inner has-text-align-center">
     <?php
     /**
      * Allow child themes and plugins to filter the display of the categories in the entry header.
