@@ -25,9 +25,6 @@ if ($has_sidebar) {
         if (!empty($isExplicitContent)) {
             // No Adds: Explicit Content
             get_template_part('template-parts/parental-advisory');
-        } else if (empty($isAddFree)) {
-            // Display Adds
-            the_ad_group(643);
         }
         ?>
     </aside>
