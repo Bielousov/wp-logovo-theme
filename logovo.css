@@ -491,6 +491,18 @@ blockquote .logovo-image-number {
 
   .logovo-m10n-block-content {
     padding: 4rem;
+    font-size: 1.6rem;
+  }
+
+  .logovo-m10n-recommended h3 {
+    margin-bottom: .5em;
+    font-size: 2.6rem;
+    
+    &::before {
+      content: 'Рекомендую:';
+      margin-right: .5em;
+      font-size: 80%;
+    }
   }
 
   .logovo-m10n-block-image {
