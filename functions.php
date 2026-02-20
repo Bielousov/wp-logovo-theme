@@ -787,3 +787,33 @@ add_filter('intermediate_image_sizes_advanced', function($sizes){
     unset($sizes['shareaholic-thumbnail']);
     return $sizes;
 });
+
+/**
+ * Order posts by sort_date meta value on the home page, with fallback to real date.
+ */
+add_action('pre_get_posts', function($query) {
+
+    if (is_admin() || !$query->is_main_query()) {
+        return;
+    }
+
+    if ($query->is_home()) {
+
+        $query->set('meta_query', [
+            'relation' => 'OR',
+            [
+                'key'     => 'sort_date',
+                'compare' => 'EXISTS',
+            ],
+            [
+                'key'     => 'sort_date',
+                'compare' => 'NOT EXISTS',
+            ]
+        ]);
+
+        $query->set('orderby', [
+            'meta_value' => 'DESC',
+            'date'       => 'DESC',
+        ]);
+    }
+});
