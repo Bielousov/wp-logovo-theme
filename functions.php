@@ -793,27 +793,26 @@ add_filter('intermediate_image_sizes_advanced', function($sizes){
  */
 add_action('pre_get_posts', function($query) {
 
-    if (is_admin() || !$query->is_main_query()) {
+    if (is_admin() || !$query->is_main_query() || !$query->is_home()) {
         return;
     }
 
-    if ($query->is_home()) {
+    add_filter('posts_clauses', function($clauses) {
+        global $wpdb;
 
-        $query->set('meta_query', [
-            'relation' => 'OR',
-            [
-                'key'     => 'sort_date',
-                'compare' => 'EXISTS',
-            ],
-            [
-                'key'     => 'sort_date',
-                'compare' => 'NOT EXISTS',
-            ]
-        ]);
+        // Left join custom field
+        $clauses['join'] .= "
+            LEFT JOIN {$wpdb->postmeta} AS ordermeta
+            ON ({$wpdb->posts}.ID = ordermeta.post_id
+            AND ordermeta.meta_key = 'sort_date')
+        ";
 
-        $query->set('orderby', [
-            'meta_value' => 'DESC',
-            'date'       => 'DESC',
-        ]);
-    }
+        // Use sort_date if exists, otherwise fallback to post_date
+        $clauses['orderby'] = "
+            COALESCE(ordermeta.meta_value, {$wpdb->posts}.post_date) DESC
+        ";
+
+        return $clauses;
+    });
+
 });
