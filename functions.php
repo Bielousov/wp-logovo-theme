@@ -75,13 +75,11 @@ function theme_support()
 	// Small 768 max, no crop
     add_image_size('small', 768, 768, false);
 
-    // Medium (960 max, no crop)
+	// Medium (960 max, no crop)
     update_option( 'medium_size_w', 960 );
-    update_option( 'medium_size_h', 960 );
 
 	// Medium Large (1200 max, no crop)
     update_option( 'medium_large_size_w', 1200 );
-    update_option( 'medium_large_size_h', 1200 );
 
     // Large (1920 max, no crop)
     update_option( 'large_size_w', 1920 );
