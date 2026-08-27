@@ -2851,8 +2851,8 @@ blockquote .alignwide {
 
 .entry-content > .entry-media img,
 .entry-content > .wp-caption img {
-  width: auto;
-  max-height: 90vh;
+  /* width: auto; */
+  max-height: 100vh;
   margin-left: auto;
   margin-right: auto;
 }

@@ -722,8 +722,7 @@ add_filter('big_image_size_threshold', '__return_false');
 
 function responsive_image_sizes($sizes, $size)
 {
-	// default to return if condition is not met
-	return '(min-width: 1200px) 1200px, 100vw';
+	return '(min-width: 960px) 960px, 100vw';
 }
 add_filter('wp_calculate_image_sizes', 'responsive_image_sizes', 10, 2);
 
