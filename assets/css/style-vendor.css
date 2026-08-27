@@ -173,7 +173,7 @@
 
 /* Shareaholic: Related posts */
 .shareaholic-canvas[data-app-id-name="post_below_content"] {
-	max-width: 100rem !important;
+	max-width: 96rem !important;
 }
 
 .shareaholic-recommendations-header  {

@@ -986,7 +986,7 @@ section {
 }
 
 .section-inner.medium {
-  max-width: 100rem;
+  max-width: 96rem;
 }
 
 .section-inner.thin {
@@ -2374,7 +2374,7 @@ body:not(.singular) main > article:first-of-type {
 
 .post-meta-wrapper {
   width: calc(100% - 4rem);
-  max-width: 100rem;
+  max-width: 96rem;
   margin-top: 2rem;
   margin-right: auto;
   margin-left: auto;
@@ -2659,7 +2659,7 @@ body:not(.singular) main > article:first-of-type {
 }
 
 .medium .entry-content {
-  max-width: 100rem;
+  max-width: 96rem;
 }
 
 .entry-content > * {
@@ -3458,7 +3458,7 @@ div.comment:first-of-type {
 
 /* Widget: Text ------------------------------ */
 .post-footer-widgets-wrapper {
-  max-width: 100rem;
+  max-width: 96rem;
   width: calc(100% - 4rem);
   margin: 5em auto;
   line-height: 1.5;

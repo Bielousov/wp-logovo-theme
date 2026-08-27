@@ -185,7 +185,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-height: min(55vh, 520px);
+  max-height: min(55vh, 540px);
   overflow: hidden;
   background-color: #f2f2f2;
   border-radius: 8px;
@@ -203,7 +203,7 @@
   width: 100%;
   opacity: 0;
   backface-visibility: hidden;
-  perspective: 1000px;
+  perspective: 96rem;
   transform: translate3d(0, 0, 0);
   transition: opacity 0.3s 0.1s !important;
 
