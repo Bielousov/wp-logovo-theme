@@ -6,25 +6,38 @@
 
 //  global $wp_query;
 
-$search_title = sprintf(
-    '%1$s %2$s',
-    '<span class="color-accent">' . __('Где тут у вас', 'twentytwenty') . '</span>',
-    '<span class="logovo-search-result-term">' . get_search_query() . '</span>?',
-);
-
 if ($wp_query->found_posts) {
-    $search_subtitle = sprintf(
-        /* translators: %s: Number of search results */
-        _n(
-            'Фух, нашел. Всего один пост, зато какой!',
-            'Этого добра у нас навалом. Найдено %s постов',
-            $wp_query->found_posts,
-            'twentytwenty'
-        ),
-        number_format_i18n($wp_query->found_posts)
+    $search_title = sprintf(
+        '%1$s %2$s',
+        '<span class="color-accent">' . __('Где тут у вас', 'twentytwenty') . '</span>',
+        '<span class="logovo-search-result-term">' . get_search_query() . '</span>?',
     );
+
+    $count = $wp_query->found_posts;
+
+    if ($count > 4) {
+        $search_subtitle = sprintf(
+            'Ну, этого добра у нас навалом. Найдено аж %s постов',
+            number_format_i18n($count)
+        );
+    } elseif ($count > 1) {
+        $search_subtitle = sprintf(
+            'Об этом я писал в %s-х постах.',
+            number_format_i18n($count)
+        );
+    } else {
+        $search_subtitle = sprintf(
+            'Фух, нашел. Всего один пост, зато какой!',
+            number_format_i18n($count)
+        );
+    }
 } else {
-    $search_subtitle = __('Ну вот, опять потерялись!', 'twentytwenty');
+    $search_title = sprintf(
+        '%1$s %2$s',
+        '<span class="color-accent">' . __('А нет у меня ничего про', 'twentytwenty') . '</span>',
+        '<span class="logovo-search-result-term">' . get_search_query() . '</span>',
+    );
+    $search_subtitle = __('Б****! Никогда такого не было, и вот опять…', 'twentytwenty');
 }
 
 if (is_search()) {
@@ -52,7 +65,7 @@ if (is_search()) {
         <?php
         if (!$wp_query->found_posts) {
         ?>
-            <div class="logovo-no-results-form section-inner thin">
+            <div class="logovo-no-results-form section-inner">
                 <?php
                 get_search_form(
                     array(
