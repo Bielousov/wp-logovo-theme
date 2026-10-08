@@ -78,12 +78,17 @@
 }
 
 .logovo-entry-header-backfill-image {
+  --blur: 10px;
+
   position: absolute;
   z-index: 0;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  filter: blur(10px);
+  top: calc( -1 * var(--blur));
+  left: calc( -1 * var(--blur));
+  width: calc(100% + 2 * var(--blur));
+  height: calc(100% + 2 * var(--blur));
+  max-width: none;
+  filter: blur(var(--blur));
+  object-fit: cover;
   opacity: 0.2;
 }
 
