@@ -206,15 +206,9 @@
   max-height: none;
   height: auto;
   width: 100%;
-  opacity: 0;
   backface-visibility: hidden;
   perspective: 96rem;
   transform: translate3d(0, 0, 0);
-  transition: opacity 0.3s 0.1s !important;
-
-  &[style] {
-    opacity: 1;
-  }
 }
 
 /**

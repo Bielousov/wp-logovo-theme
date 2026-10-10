@@ -16,12 +16,18 @@
         const maxParallaxIntensity = 64;
 
         parallaxImages.forEach(figure => {
-            const rect = figure.getBoundingClientRect();
-            // Only apply effect when figure is in view
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                const img = figure.querySelector("img");
-                if (!img) return;
+            const img = figure.querySelector("img");
+            if (!img) return;
 
+            const rect = figure.getBoundingClientRect();
+            let scrollAmount = 0;
+
+            if (
+                rect.top < window.innerHeight &&
+                rect.bottom > 0 &&
+                img.naturalWidth > 0 &&
+                img.naturalHeight > 0
+            ) {
                 // Image's actual height (may not be fully visible)
                 const imageHeight = img.naturalHeight / img.naturalWidth * img.offsetWidth;
 
@@ -30,10 +36,10 @@
 
                 // Normalize scroll ratio (0 when at top of viewport, 1 when at bottom)
                 const scrollRatio = rect.top / window.innerHeight;
-                const scrollAmount = scrollRatio * -maxTranslate;
-
-                figure.querySelector('img').style.transform = `translate3d(0, ${scrollAmount}px, 0)`;
+                scrollAmount = scrollRatio * -maxTranslate;
             }
+
+            img.style.transform = `translate3d(0, ${scrollAmount}px, 0)`;
         });
     };
 
@@ -41,7 +47,7 @@
 
     window.addEventListener("scroll", onScroll);
     window.addEventListener("resize", onScroll);
-    document.querySelectorAll(".logovo-parallax").forEach(img => img.addEventListener("load", onScroll));
+    document.querySelectorAll(".logovo-parallax img").forEach(img => img.addEventListener("load", onScroll));
 
     updateParallax();
 })(window);
