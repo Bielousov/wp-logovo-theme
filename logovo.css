@@ -269,10 +269,10 @@ blockquote .logovo-image-number {
 .entry-content > .entry-media.panorama-canvas img.panorama {
   width: fit-content;
   max-width: initial;
-  margin: 0 auto !important;
   height: min(60vw, 60vh);
   max-height: 720px;
   min-height: 300px;
+  margin: 0 auto !important;
   cursor: move;
 }
 
